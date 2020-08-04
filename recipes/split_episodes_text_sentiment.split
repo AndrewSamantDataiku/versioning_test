@@ -1,0 +1,202 @@
+{
+  "centileShuffle": false,
+  "centileSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "defaultOutputIndex": 1,
+  "seed": 1337,
+  "randomColumns": [],
+  "centileOrders": [],
+  "rangeSetTime": false,
+  "engineType": "DSS",
+  "randomSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "randomColumnsSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "computedColumns": [],
+  "writeComputedColumnsInOutput": false,
+  "mode": "FILTERS",
+  "centileTDigest": false,
+  "valueSplits": [
+    {
+      "outputIndex": 0,
+      "caseSensitive": false
+    }
+  ],
+  "rangeSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": []
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "filterSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": [
+            {
+              "input": "category",
+              "col": "id",
+              "num": 0,
+              "operator": "not empty"
+            }
+          ]
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "path",
+                "type": "string"
+              },
+              {
+                "name": "id",
+                "type": "string"
+              },
+              {
+                "name": "text",
+                "type": "string"
+              },
+              {
+                "name": "show_id",
+                "type": "string"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "name": "link",
+                "type": "string"
+              },
+              {
+                "name": "guid",
+                "type": "string"
+              },
+              {
+                "name": "subtitle",
+                "type": "string"
+              },
+              {
+                "name": "description",
+                "type": "string"
+              },
+              {
+                "name": "summary",
+                "type": "string"
+              },
+              {
+                "name": "author",
+                "type": "string"
+              },
+              {
+                "name": "audio_url",
+                "type": "string"
+              },
+              {
+                "name": "audio_file_size",
+                "type": "bigint"
+              },
+              {
+                "name": "audio_mime_type",
+                "type": "string"
+              },
+              {
+                "name": "category",
+                "type": "string"
+              },
+              {
+                "name": "explicit",
+                "type": "bigint"
+              },
+              {
+                "name": "length",
+                "type": "bigint"
+              },
+              {
+                "name": "pub_date",
+                "type": "string"
+              },
+              {
+                "name": "keywords",
+                "type": "string"
+              },
+              {
+                "name": "predicted_sentiment",
+                "type": "string"
+              },
+              {
+                "name": "prediction_confidence",
+                "type": "double"
+              }
+            ]
+          },
+          "validated": true,
+          "fullyTranslated": false,
+          "ok": false,
+          "message": "Filter expression is invalid"
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ]
+}

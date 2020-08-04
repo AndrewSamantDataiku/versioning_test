@@ -1,0 +1,34 @@
+{
+  "pages": [
+    {
+      "id": "gFf8QmP",
+      "grid": {
+        "tiles": []
+      },
+      "showTitle": false
+    }
+  ],
+  "owner": "asamant",
+  "listed": true,
+  "name": "podcast_reader\u0027s default dashboard",
+  "showGrid": true,
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "asamant"
+    },
+    "lastModifiedOn": 1586288040982
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "asamant"
+    },
+    "lastModifiedOn": 1586288040982
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

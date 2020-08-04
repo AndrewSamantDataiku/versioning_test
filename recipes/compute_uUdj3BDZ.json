@@ -1,0 +1,71 @@
+{
+  "type": "python",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "envSelection": {
+      "envMode": "USE_BUILTIN_MODE",
+      "envName": "podcast_reader_ffmpeg"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    },
+    "skipPrerunValidate": false
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "episodes_sample",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "XfO410vY",
+          "appendMode": false
+        },
+        {
+          "ref": "aR0Pwpei",
+          "appendMode": false
+        },
+        {
+          "ref": "klPrZDXv",
+          "appendMode": false
+        },
+        {
+          "ref": "NTFvIp7I",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 36,
+    "lastModifiedBy": {
+      "login": "asamant"
+    },
+    "lastModifiedOn": 1595264957853
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "asamant"
+    },
+    "lastModifiedOn": 1594921634591
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "type": "pyspark",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "envSelection": {
+      "envMode": "USE_BUILTIN_MODE",
+      "envName": "podcast_reader_ffmpeg"
+    },
+    "sparkConfig": {
+      "inheritConf": "sample-yarn-config",
+      "conf": []
+    },
+    "executionEngine": "SPARK_SUBMIT",
+    "pipelineAllowStart": true,
+    "pipelineAllowMerge": true,
+    "skipPrerunValidate": false
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "XfO410vY",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "episodes_text_spark",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 58,
+    "lastModifiedBy": {
+      "login": "asamant"
+    },
+    "lastModifiedOn": 1595603284639
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "asamant"
+    },
+    "lastModifiedOn": 1595265099036
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
