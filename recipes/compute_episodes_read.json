@@ -5,7 +5,7 @@
   "params": {
     "envSelection": {
       "envMode": "EXPLICIT_ENV",
-      "envName": "ffmpeg_27"
+      "envName": "pmp_36"
     },
     "sparkConfig": {
       "inheritConf": "k8s-config-standard",
@@ -50,11 +50,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 19,
+    "versionNumber": 20,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1601312551891
+    "lastModifiedOn": 1601312627399
   },
   "creationTag": {
     "versionNumber": 0,
