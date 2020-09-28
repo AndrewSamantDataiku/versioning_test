@@ -40,7 +40,7 @@ def read_episode(url):
     with open("/tmp/audio.mp3", 'wb') as w:
         w.write(file.content)
         
-    
+    from pydub import AudioSegment
 #    mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
     return url
 
