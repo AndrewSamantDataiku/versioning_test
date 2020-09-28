@@ -34,21 +34,19 @@ def read_episode(url):
     file = requests.get(url)
     with mp3_folder.get_writer(audio_id + ".mp3") as w:
         w.write(file.content)
-    return s * s
+    mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
+    return url
 
-sq_udf = udf(lambda z: sq(z), IntegerType())
+read_udf = udf(lambda z: read_eipsode(z), StringType())
 
-rdf = sqlContext.createDataFrame(df)
-rdf2 = rdf.withColumn( 'c2',sq_udf('c1'))
+rdf = sqlContext.createDataFrame(episodes_sample_df)
+rdf2 = rdf.withColumn( 'url_out',read_udf('url'))
 
 
-# Read recipe inputs
-episodes_sample = dataiku.Dataset("episodes_sample")
-episodes_sample_df = dkuspark.get_dataframe(sqlContext, episodes_sample)
 
 # Compute recipe outputs from inputs
 # TODO: Replace this part by your actual code that computes the output, as a SparkSQL dataframe
-episodes_read_df = episodes_sample_df # For this sample code, simply copy input to output
+episodes_read_df = rdf2.to_pandas() # For this sample code, simply copy input to output
 
 # Write recipe outputs
 episodes_read = dataiku.Dataset("episodes_read")
