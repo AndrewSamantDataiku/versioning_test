@@ -34,6 +34,7 @@ wav_folder = dataiku.Folder("wav_files_local")
 def read_episode(url):
 
     import requests
+    import dataiku
     file = requests.get(url)
     with mp3_folder.get_writer(audio_id + ".mp3") as w:
         w.write(file.content)
