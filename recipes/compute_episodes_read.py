@@ -34,6 +34,8 @@ def read_episode(url):
     file = requests.get(url)
     with mp3_folder.get_writer(audio_id + ".mp3") as w:
         w.write(file.content)
+        
+    
     mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
     return url
 
