@@ -4,7 +4,8 @@
   "optionalDependencies": false,
   "params": {
     "envSelection": {
-      "envMode": "INHERIT"
+      "envMode": "EXPLICIT_ENV",
+      "envName": "ffmpeg_27"
     },
     "sparkConfig": {
       "inheritConf": "k8s-config-standard",
@@ -41,11 +42,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1601309715799
+    "lastModifiedOn": 1601309784673
   },
   "creationTag": {
     "versionNumber": 0,
