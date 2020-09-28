@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import dataiku
 from dataiku import spark as dkuspark
+import dataiku.spark as dspark
 from pyspark import SparkContext
 from pyspark.sql import SQLContext
 from pyspark.sql.types import *
@@ -24,12 +25,18 @@ MAX_EPISODES = 500
 r = sr.Recognizer()
 
 episodes_sample = dataiku.Dataset("episodes_sample")
-episodes_sample_df = episodes_sample.get_dataframe()
+
+episodes_sample_df = dspark.get_dataframe(sqlContext, episodes_sample)
 
 mp3_folder = dataiku.Folder("mp3_files_local")
 wav_folder = dataiku.Folder("wav_files_local")
 
 def read_episode(url):
+
+dataset = dataiku.Dataset("episodes_sample")
+dataframe = dspark.get_dataframe(sql_context, dataset)
+
+
     import requests
     file = requests.get(url)
     with mp3_folder.get_writer(audio_id + ".mp3") as w:
@@ -41,7 +48,7 @@ def read_episode(url):
 
 read_udf = udf(lambda z: read_episode(z), StringType())
 
-rdf = sqlContext.createDataFrame(episodes_sample_df)
+rdf = episodes_sample_df
 rdf2 = rdf.withColumn( 'url_out',read_udf('url'))
 
 
