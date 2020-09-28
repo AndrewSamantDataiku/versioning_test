@@ -35,13 +35,13 @@ def read_episode(url):
 
     import requests
 #    import dataiku
-    file = requests.get(url)
-    mp3_folder = dataiku.Folder("mp3_files_local")
-    with mp3_folder.get_writer(audio_id + ".mp3") as w:
-        w.write(file.content)
+#    file = requests.get(url)
+#    mp3_folder = dataiku.Folder("mp3_files_local")
+#    with mp3_folder.get_writer(audio_id + ".mp3") as w:
+#        w.write(file.content)
         
     
-    mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
+#    mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
     return url
 
 read_udf = udf(lambda z: read_episode(z), StringType())
