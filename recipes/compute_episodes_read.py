@@ -39,7 +39,7 @@ def read_episode(url):
     mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
     return url
 
-read_udf = udf(lambda z: read_eipsode(z), StringType())
+read_udf = udf(lambda z: read_episode(z), StringType())
 
 rdf = sqlContext.createDataFrame(episodes_sample_df)
 rdf2 = rdf.withColumn( 'url_out',read_udf('url'))
