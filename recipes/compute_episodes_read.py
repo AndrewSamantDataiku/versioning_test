@@ -45,7 +45,7 @@ def read_episode(url):
 read_udf = udf(lambda z: read_episode(z), StringType())
 
 rdf = episodes_sample_df
-rdf2 = rdf.withColumn( 'url_out',read_udf('url'))
+rdf2 = rdf.withColumn( 'url_out',read_udf('audio_url'))
 
 
 
