@@ -51,8 +51,8 @@ rdf2 = rdf.withColumn( 'url_out',read_udf('audio_url'))
 
 # Compute recipe outputs from inputs
 # TODO: Replace this part by your actual code that computes the output, as a SparkSQL dataframe
-episodes_read_df = rdf2.to_pandas() # For this sample code, simply copy input to output
+#episodes_read_df = rdf2.to_pandas() # For this sample code, simply copy input to output
 
 # Write recipe outputs
 episodes_read = dataiku.Dataset("episodes_read")
-dkuspark.write_with_schema(episodes_read, episodes_read_df)
+dkuspark.write_with_schema(episodes_read, rdf2)
