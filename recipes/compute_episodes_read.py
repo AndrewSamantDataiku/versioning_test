@@ -33,10 +33,6 @@ wav_folder = dataiku.Folder("wav_files_local")
 
 def read_episode(url):
 
-dataset = dataiku.Dataset("episodes_sample")
-dataframe = dspark.get_dataframe(sql_context, dataset)
-
-
     import requests
     file = requests.get(url)
     with mp3_folder.get_writer(audio_id + ".mp3") as w:
