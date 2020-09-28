@@ -23,12 +23,7 @@
   "maxRunningActivities": 0,
   "inputs": {
     "main": {
-      "items": [
-        {
-          "ref": "episodes_sample",
-          "deps": []
-        }
-      ]
+      "items": []
     }
   },
   "outputs": {
@@ -50,11 +45,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 36,
+    "versionNumber": 37,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1601317355160
+    "lastModifiedOn": 1601317752726
   },
   "creationTag": {
     "versionNumber": 0,

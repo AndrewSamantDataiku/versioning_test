@@ -24,7 +24,7 @@ MAX_EPISODES = 500
 
 r = sr.Recognizer()
 
-episodes_sample = dataiku.Dataset("episodes_sample")
+episodes_sample = dataiku.Dataset("episodes_sample_filtered")
 
 episodes_sample_df = dspark.get_dataframe(sqlContext, episodes_sample)
 
