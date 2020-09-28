@@ -37,11 +37,11 @@ def read_episode(url):
 #    import dataiku
     file = requests.get(url)
 #    mp3_folder = dataiku.Folder("mp3_files_local")
-    with open("/tmp/audio.mp3", 'wb') as w:
+    with open("audio.mp3", 'wb') as w:
         w.write(file.content)
         
     from pydub import AudioSegment
-    AudioSegment.from_mp3("/tmp/audio.mp3").export("/tmp/audio.wav", format="wav")
+    AudioSegment.from_mp3("audio.mp3").export("/tmp/audio.wav", format="wav")
 #    mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
     return url
 
