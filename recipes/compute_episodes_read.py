@@ -49,16 +49,16 @@ def read_episode(url):
                              "-ac","1",
                              "audio.wav"])
     s= ""
-    """
+    
     import speech_recognition as sr
 
-    with sr.AudioFile("/tmp/audio.wav") as source:
+    with sr.AudioFile("audio.wav") as source:
         audio = r.record(source)
         try:
             s += " " + r.recognize_sphinx(audio)
         except:
             s += " "
-    """
+    
     return s
 
 read_udf = udf(lambda z: read_episode(z), StringType())
