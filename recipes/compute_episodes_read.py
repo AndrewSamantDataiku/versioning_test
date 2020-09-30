@@ -63,9 +63,9 @@ def read_episode(url):
             recognized = r.recognize_google(audio)
         s.append( recognized )
     
-    return str(duration)
+    return s
 
-read_udf = udf(lambda z: read_episode(z), StringType())
+read_udf = udf(lambda z: read_episode(z), ArrayType(StringType()) )
 
 rdf = episodes_sample_df
 rdf2 = rdf.withColumn( 'text',read_udf('audio_url'))
