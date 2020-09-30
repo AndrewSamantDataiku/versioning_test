@@ -42,7 +42,7 @@ def read_episode(url):
        
     from pydub import AudioSegment
     
-    AudioSegment.from_mp3("audio.mp3").export("/tmp/audio.wav", format="wav")
+    AudioSegment.from_mp3("audio.mp3").export("audio.wav", format="wav")
     
     s= ""
     """
