@@ -61,6 +61,7 @@
       "params": {
         "columnNamePattern": "text_chunk.*",
         "columnNameColumn": "chunk_id",
+        "foldRemoveFoldedColumns": true,
         "columnContentColumn": "text"
       },
       "alwaysShowComment": false
