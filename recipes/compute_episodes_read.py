@@ -51,11 +51,12 @@ def read_episode(url):
     s= ""
     
     import speech_recognition as sr
+    r = sr.Recognizer()
 
     with sr.AudioFile("audio.wav") as source:
         audio = r.record(source)
         #try:
-        s += " " + r.recognize_sphinx(audio)
+        s += " " + r.recognize_google(audio)
         #except:
         #    s += " "
     
