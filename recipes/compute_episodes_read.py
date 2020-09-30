@@ -42,6 +42,8 @@ def read_episode(url):
        
     #from pydub import AudioSegment
     
+    result = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', "audio.mp3"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    
     #AudioSegment.from_mp3("audio.mp3").export("audio.wav", format="wav")
     subprocess.call(["ffmpeg","-y",
                              "-ss", "0",
