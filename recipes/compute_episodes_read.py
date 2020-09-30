@@ -44,10 +44,10 @@ def read_episode(url):
     
     #AudioSegment.from_mp3("audio.mp3").export("audio.wav", format="wav")
     subprocess.call(["ffmpeg","-y",
+                             "-ss", "0",
                              "-i","audio.mp3",
                              "-r","16000",
-                             "-ac","1",
-                             "-ss", "0", 
+                             "-ac","1", 
                              "-t"," 50",
                              "audio.wav"])
     s= ""
