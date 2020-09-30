@@ -23,9 +23,6 @@ sqlContext = SQLContext(sc)
 episodes_sample = dataiku.Dataset("episodes_sample_filtered")
 episodes_sample_df = dspark.get_dataframe(sqlContext, episodes_sample)
 
-mp3_folder = dataiku.Folder("mp3_files_local")
-wav_folder = dataiku.Folder("wav_files_local")
-
 def read_episode(url):
     
     import requests
