@@ -42,9 +42,8 @@ def read_episode(url):
        
     #from pydub import AudioSegment
     
-    result = float(subprocess.Popen(['ffprobe', 
-                             '-show_entries', 'format=duration', 
-                             "audio.mp3"], stdout=subprocess.PIPE).read())
+    from mutagen.mp3 import MP3
+    duration = MP3("audio.mp3").info.length
     
     #AudioSegment.from_mp3("audio.mp3").export("audio.wav", format="wav")
     subprocess.call(["ffmpeg","-y",
@@ -52,7 +51,7 @@ def read_episode(url):
                              "-i","audio.mp3",
                              "-r","16000",
                              "-ac","1", 
-                             "-t"," 50",
+                             "-t"," 30",
                              "audio.wav"])
     s= ""
     
@@ -66,7 +65,7 @@ def read_episode(url):
         #except:
         #    s += " "
     
-    return str(result)
+    return str(duration)
 
 read_udf = udf(lambda z: read_episode(z), StringType())
 
