@@ -44,7 +44,7 @@ def read_episode(url):
     
     result = float(subprocess.Popen(['ffprobe', 
                              '-show_entries', 'format=duration', 
-                             "audio.mp3"], stdout=subprocess.PIPE)).read()
+                             "audio.mp3"], stdout=subprocess.PIPE).read())
     
     #AudioSegment.from_mp3("audio.mp3").export("audio.wav", format="wav")
     subprocess.call(["ffmpeg","-y",
