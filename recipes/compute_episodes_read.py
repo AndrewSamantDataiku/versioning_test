@@ -32,13 +32,6 @@ mp3_folder = dataiku.Folder("mp3_files_local")
 wav_folder = dataiku.Folder("wav_files_local")
 
 def read_episode(url):
-    from dlffmpeg import getFFmpeg
-    dl = getFFmpeg()
-    dl.path = ''
-    dl.silent = True
-    dl.pretty = True
-    dl.verbose = False
-    dl.run()
 
     import requests
 #    import dataiku
