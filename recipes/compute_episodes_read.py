@@ -43,7 +43,16 @@ def read_episode(url):
     from pydub import AudioSegment
     AudioSegment.from_mp3("audio.mp3").export("/tmp/audio.wav", format="wav")
 #    mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
-    return url
+    r = sr.Recognizer()
+
+    with audios.get_download_stream(path) as stream:
+        with sr.AudioFile(stream) as source:
+            audio_google = r.record(source)
+    try:
+        text = r.recognize_google(audio_google)
+    except:
+        text = "NA"
+    return text
 
 read_udf = udf(lambda z: read_episode(z), StringType())
 
