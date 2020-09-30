@@ -36,10 +36,10 @@ def read_episode(url):
     import requests
 #    import dataiku
     file = requests.get(url)
-    """
+    
     with open("audio.mp3", 'wb') as w:
         w.write(file.content)
-        
+    """    
     from pydub import AudioSegment
     AudioSegment.from_mp3("audio.mp3").export("/tmp/audio.wav", format="wav")
     """
