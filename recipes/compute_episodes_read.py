@@ -41,9 +41,9 @@ def read_episode(url):
         w.write(file.content)
        
     from pydub import AudioSegment
-    """ 
+    
     AudioSegment.from_mp3("audio.mp3").export("/tmp/audio.wav", format="wav")
-    """
+    
     s= ""
     """
     import speech_recognition as sr
