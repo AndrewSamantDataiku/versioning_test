@@ -60,7 +60,7 @@ def read_episode(url):
     import speech_recognition as sr
     r = sr.Recognizer()
     for c in range(1,chunk_count):
-        with sr.AudioFile("audio_part_" + c + ".wav") as source:
+        with sr.AudioFile("audio_part_" + str(c) + ".wav") as source:
             audio = r.record(source)
             #try:
             s = s.append( r.recognize_google(audio) )
