@@ -65,7 +65,7 @@ def read_episode(url):
             audio = r.record(source)
             recognized = r.recognize_google(audio)
             #try:
-        s = s.append( recognized )
+        s.append( recognized )
             #except:
             #    s += " "
     
