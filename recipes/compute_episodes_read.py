@@ -63,7 +63,7 @@ def read_episode(url):
         with sr.AudioFile("audio_part_" + c + ".wav") as source:
             audio = r.record(source)
             #try:
-            s += s.append( r.recognize_google(audio) )
+            s = s.append( r.recognize_google(audio) )
             #except:
             #    s += " "
     
