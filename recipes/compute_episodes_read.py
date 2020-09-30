@@ -47,12 +47,12 @@ def read_episode(url):
     
     #AudioSegment.from_mp3("audio.mp3").export("audio.wav", format="wav")
     subprocess.call(["ffmpeg","-y",
-                             "-ss", "0",
                              "-i","audio.mp3",
                              "-r","16000",
                              "-ac","1", 
-                             "-t"," 30",
-                             "audio.wav"])
+                             "-segment_time","00:00:30",
+                             "-f","segment",
+                             "audio_part_%03d.wav"])
     s= ""
     
     import speech_recognition as sr
