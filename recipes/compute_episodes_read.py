@@ -34,13 +34,10 @@ wav_folder = dataiku.Folder("wav_files_local")
 def read_episode(url):
     
     import requests
-#    import dataiku
     file = requests.get(url)
     
     with open("audio.mp3", 'wb') as w:
         w.write(file.content)
-       
-    #from pydub import AudioSegment
     
     from mutagen.mp3 import MP3
     duration = MP3("audio.mp3").info.length
@@ -64,10 +61,7 @@ def read_episode(url):
         with sr.AudioFile("audio_part_" + str(c) + ".wav") as source:
             audio = r.record(source)
             recognized = r.recognize_google(audio)
-            #try:
         s.append( recognized )
-            #except:
-            #    s += " "
     
     return str(duration)
 
