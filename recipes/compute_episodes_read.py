@@ -45,7 +45,7 @@ def read_episode(url):
     from mutagen.mp3 import MP3
     duration = MP3("audio.mp3").info.length
     import math
-    chunk_count = math.ceil(duration/30)
+    chunk_count = int(math.ceil(duration/30))
     
     #AudioSegment.from_mp3("audio.mp3").export("audio.wav", format="wav")
     subprocess.call(["ffmpeg","-y",
