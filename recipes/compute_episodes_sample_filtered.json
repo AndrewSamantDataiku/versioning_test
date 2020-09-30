@@ -16,7 +16,7 @@
         "rules": []
       },
       "samplingMethod": "HEAD_SEQUENTIAL",
-      "maxRecords": 10,
+      "maxRecords": 3,
       "targetRatio": 0.02,
       "withinFirstN": -1,
       "maxReadUncompressedBytes": -1
@@ -83,11 +83,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1601489453927
+    "lastModifiedOn": 1601492364013
   },
   "creationTag": {
     "versionNumber": 0,
