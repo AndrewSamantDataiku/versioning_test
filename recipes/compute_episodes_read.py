@@ -36,16 +36,14 @@ def read_episode(url):
     import requests
 #    import dataiku
     file = requests.get(url)
-#    mp3_folder = dataiku.Folder("mp3_files_local")
     with open("audio.mp3", 'wb') as w:
         w.write(file.content)
         
     from pydub import AudioSegment
     AudioSegment.from_mp3("audio.mp3").export("/tmp/audio.wav", format="wav")
-#    mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
     r = sr.Recognizer()
 
-    with audios.get_download_stream(path) as stream:
+    with audios.get_download_stream("/tmp/audio.wav") as stream:
         with sr.AudioFile(stream) as source:
             audio_google = r.record(source)
     try:
@@ -57,7 +55,7 @@ def read_episode(url):
 read_udf = udf(lambda z: read_episode(z), StringType())
 
 rdf = episodes_sample_df
-rdf2 = rdf.withColumn( 'url_out',read_udf('audio_url'))
+rdf2 = rdf.withColumn( 'text',read_udf('audio_url'))
 
 
 
