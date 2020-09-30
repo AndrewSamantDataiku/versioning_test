@@ -32,7 +32,7 @@ mp3_folder = dataiku.Folder("mp3_files_local")
 wav_folder = dataiku.Folder("wav_files_local")
 
 def read_episode(url):
-
+    """
     import requests
 #    import dataiku
     file = requests.get(url)
@@ -41,6 +41,7 @@ def read_episode(url):
         
     from pydub import AudioSegment
     AudioSegment.from_mp3("audio.mp3").export("/tmp/audio.wav", format="wav")
+    """
     s= ""
     """
     import speech_recognition as sr
