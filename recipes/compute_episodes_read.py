@@ -48,7 +48,7 @@ def read_episode(url):
                              "-r","16000",
                              "-ac","1",
                              "-ss", "0", "-t"," 50",
-                             "audio.wav"]])
+                             "audio.wav"])
     s= ""
     
     import speech_recognition as sr
