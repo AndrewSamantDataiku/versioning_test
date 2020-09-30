@@ -47,7 +47,7 @@ def read_episode(url):
     import math
     chunk_count = int(math.ceil(duration/30))
     
-    s= []
+    s= list()
     
     import speech_recognition as sr
     r = sr.Recognizer()
