@@ -47,7 +47,8 @@ def read_episode(url):
                              "-i","audio.mp3",
                              "-r","16000",
                              "-ac","1",
-                             "-ss", "0", "-t"," 50",
+                             "-ss", "0", 
+                             "-t"," 50",
                              "audio.wav"])
     s= ""
     
