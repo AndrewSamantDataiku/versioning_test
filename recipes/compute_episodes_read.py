@@ -47,19 +47,20 @@ def read_episode(url):
     import math
     chunk_count = int(math.ceil(duration/30))
     
-    #AudioSegment.from_mp3("audio.mp3").export("audio.wav", format="wav")
-    subprocess.call(["ffmpeg","-y",
-                             "-i","audio.mp3",
-                             "-r","16000",
-                             "-ac","1", 
-                             "-segment_time","00:00:30",
-                             "-f","segment",
-                             "audio_part_%03d.wav"])
     s= []
     
     import speech_recognition as sr
     r = sr.Recognizer()
     for c in range(1,chunk_count):
+        subprocess.call(["ffmpeg","-y",
+                             "-ss",str( (c-1)*30)
+                             "-i","audio.mp3",
+                             "-r","16000",
+                             "-ac","1", 
+                             "-t","30",
+                             "audio_part_" + str(c) + ".wav"])
+        
+        
         with sr.AudioFile("audio_part_" + str(c) + ".wav") as source:
             audio = r.record(source)
             #try:
