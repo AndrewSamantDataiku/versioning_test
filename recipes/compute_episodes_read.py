@@ -54,10 +54,10 @@ def read_episode(url):
 
     with sr.AudioFile("audio.wav") as source:
         audio = r.record(source)
-        try:
-            s += " " + r.recognize_sphinx(audio)
-        except:
-            s += " "
+        #try:
+        s += " " + r.recognize_sphinx(audio)
+        #except:
+        #    s += " "
     
     return s
 
