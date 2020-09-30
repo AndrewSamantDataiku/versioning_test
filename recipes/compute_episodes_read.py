@@ -55,17 +55,17 @@ def read_episode(url):
                              "-segment_time","00:00:30",
                              "-f","segment",
                              "audio_part_%03d.wav"])
-    s= ""
+    s= []
     
     import speech_recognition as sr
     r = sr.Recognizer()
-
-    with sr.AudioFile("audio.wav") as source:
-        audio = r.record(source)
-        #try:
-        s += " " + r.recognize_google(audio)
-        #except:
-        #    s += " "
+    for c in range(1,chunk_count):
+        with sr.AudioFile("audio_part_" + c + ".wav") as source:
+            audio = r.record(source)
+            #try:
+            s += s.append( r.recognize_google(audio) )
+            #except:
+            #    s += " "
     
     return str(duration)
 
