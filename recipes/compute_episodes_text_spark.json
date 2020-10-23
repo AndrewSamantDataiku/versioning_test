@@ -4,11 +4,11 @@
   "optionalDependencies": false,
   "params": {
     "envSelection": {
-      "envMode": "USE_BUILTIN_MODE",
-      "envName": "podcast_reader_ffmpeg"
+      "envMode": "EXPLICIT_ENV",
+      "envName": "ffmpeg_27"
     },
     "sparkConfig": {
-      "inheritConf": "sample-yarn-config",
+      "inheritConf": "ffmpeg-spark-k8s-config",
       "conf": []
     },
     "executionEngine": "SPARK_SUBMIT",
@@ -42,11 +42,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 59,
+    "versionNumber": 60,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1601484925571
+    "lastModifiedOn": 1603463130936
   },
   "creationTag": {
     "versionNumber": 0,
