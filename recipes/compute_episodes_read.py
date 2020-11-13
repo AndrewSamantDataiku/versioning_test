@@ -53,7 +53,7 @@ def read_episode(url):
         with sr.AudioFile("audio_part_" + str(c) + ".wav") as source:
             audio = r.record(source)
             #try:
-            recognized = r.recognize_sphinx(audio)
+            recognized = r.recognize_google(audio)
             #except:
             #    recognized = ""
         s.append( recognized )
