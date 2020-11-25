@@ -40,7 +40,7 @@ def read_episode(url,length):
     for c in range(1,chunk_count):
         subprocess.call([ffmpeg_path,"-y",
                              '-c:a',
-                         '-analyzeduration','INT_MAX',
+                         '-analyzeduration','15M',
                              "-ss",max(str( (c-1)*30),1),
                              "-i",audio_path,
                              "-r","16000",
