@@ -49,7 +49,7 @@ def read_episode(url):
     
     return s
 
-episodes_sample_df['text'] = []
+episodes_sample_df['text'] = ''
 rdf2 = rdf.withColumn( 'text',read_udf('audio_url'))
 
 
