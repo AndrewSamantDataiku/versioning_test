@@ -78,11 +78,6 @@ episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(r
     
 
 
-
-# Compute recipe outputs from inputs
-# TODO: Replace this part by your actual code that computes the output, as a SparkSQL dataframe
-#episodes_read_df = rdf2.to_pandas() # For this sample code, simply copy input to output
-
 # Write recipe outputs
 episodes_read = dataiku.Dataset("episodes_read")
-dkuspark.write_with_schema(episodes_read, rdf2)
+episodes_read.write_with_schema(episodes_sample_df)
