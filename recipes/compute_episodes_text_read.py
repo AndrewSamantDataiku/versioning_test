@@ -39,7 +39,7 @@ def read_episode(url):
                              "-r","16000",
                              "-ac","1", 
                              "-t","30",
-                             "audio_part_" + str(c) + ".wav"])
+                             mp3_folder_path + "/audio_part_" + str(c) + ".wav"])
         
         
         with sr.AudioFile("audio_part_" + str(c) + ".wav") as source:
