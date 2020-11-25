@@ -13,6 +13,8 @@ episodes_sample = dataiku.Dataset("episodes_sample_filtered")
 episodes_sample_df = episodes_sample.get_dataframe()
 
 mp3_folder = Dataiku.Folder('temp_mp3_folder')
+mp3_folder_path = mp3_folder.get_path()
+audio_path = mp3_folder_path + '/audio.mp3'
 
 def read_episode(url):
     
@@ -23,7 +25,7 @@ def read_episode(url):
             w.write(file.content)
     
     from mutagen.mp3 import MP3
-    duration = MP3("audio.mp3").info.length
+    duration = MP3(audio_path).info.length
     import math
     chunk_count = int(math.ceil(duration/30))
     
