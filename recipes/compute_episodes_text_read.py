@@ -59,6 +59,8 @@ def read_episode(url):
                         recognized = r.recognize_google(audio)
                         failure_count = failure_count+1
                     except:
+                        if failure_count 
+                            
                         recognized = ""
         s.append( recognized )
     
