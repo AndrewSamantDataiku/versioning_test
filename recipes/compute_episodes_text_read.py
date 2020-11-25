@@ -84,5 +84,5 @@ episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(r
 
 
 # Write recipe outputs
-episodes_read = dataiku.Dataset("episodes_read")
+episodes_read = dataiku.Dataset("episodes_text_read")
 episodes_read.write_with_schema(episodes_sample_df)
