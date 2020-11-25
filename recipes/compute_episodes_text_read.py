@@ -20,6 +20,7 @@ audio_path = mp3_folder_path + '/audio.mp3'
 wav_path = mp3_folder_path + '/audio.wav'
 
 failure_count = 0
+ffmpeg_path = '/data/dataiku/data_dir/code-envs/python/ffmpeg_27/bin/ffmpeg/ffmpeg-4.3.1-amd64-static/ffmpeg'
 
 def read_episode(url,length):
     
@@ -37,7 +38,7 @@ def read_episode(url,length):
     import speech_recognition as sr
     r = sr.Recognizer()
     for c in range(1,chunk_count):
-        subprocess.call(["/usr/local/bin/ffmpeg","-y",
+        subprocess.call([ffmpeg_path,"-y",
                              "-ss",str( (c-1)*30),
                              "-i",audio_path,
                              "-r","16000",
