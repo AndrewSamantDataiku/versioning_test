@@ -1,7 +1,7 @@
 
 # Recipe Parameters
 
-MAX_EPISODES = 500
+MAX_EPISODES = 50000
 
 DOWNLOAD_FROM_URL = True
 
