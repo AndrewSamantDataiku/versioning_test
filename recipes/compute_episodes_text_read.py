@@ -8,6 +8,8 @@ import subprocess
 from pydub import AudioSegment
 import os
 import scipy.io.wavfile as wav
+from mutagen.mp3 import MP3
+import math
 
 episodes_sample = dataiku.Dataset("episodes_sample_filtered")
 episodes_sample_df = episodes_sample.get_dataframe()
@@ -18,15 +20,12 @@ audio_path = mp3_folder_path + '/audio.mp3'
 
 def read_episode(url):
     
-    import requests
-    file = requests.get(url)
     
+    file = requests.get(url)    
     with mp3_folder.get_writer("audio.mp3") as w:
             w.write(file.content)
     
-    from mutagen.mp3 import MP3
     duration = MP3(audio_path).info.length
-    import math
     chunk_count = int(math.ceil(duration/30))
     
     s= list()
@@ -36,7 +35,7 @@ def read_episode(url):
     for c in range(1,chunk_count):
         subprocess.call(["ffmpeg","-y",
                              "-ss",str( (c-1)*30),
-                             "-i","audio.mp3",
+                             "-i",audio_path,
                              "-r","16000",
                              "-ac","1", 
                              "-t","30",
