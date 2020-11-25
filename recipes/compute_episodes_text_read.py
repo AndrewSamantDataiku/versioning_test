@@ -44,6 +44,7 @@ def read_episode(url,length):
                              "-r","16000",
                              "-ac","1", 
                              "-t","30",
+                             "--probesize","5000000000",
                              wav_path])
         
         
