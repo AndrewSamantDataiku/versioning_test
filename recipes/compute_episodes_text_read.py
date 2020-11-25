@@ -2,7 +2,6 @@ import dataiku
 import pandas as pd
 import numpy as np
 import requests
-import ffmpeg
 import speech_recognition as sr
 import subprocess
 from pydub import AudioSegment
