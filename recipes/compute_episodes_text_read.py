@@ -52,16 +52,22 @@ def read_episode(url):
             except:
                 try:
                     time.wait(10)
+                    r = sr.Recognizer()
                     recognized = r.recognize_google(audio)
                 except:
                     try:
                         time.wait(60)
+                        r = sr.Recognizer()
                         recognized = r.recognize_google(audio)
                         failure_count = failure_count+1
                     except:
-                        if failure_count 
-                            
-                        recognized = ""
+                        if failure_count % 5 == 0:
+                            time.wait(300)
+                        try:
+                            r = sr.Recognizer()
+                            recognized = r.recognize_google(audio)
+                        except:
+                            recognized = ""
         s.append( recognized )
     
     return s
