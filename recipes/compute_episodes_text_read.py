@@ -17,6 +17,7 @@ episodes_sample_df = episodes_sample.get_dataframe()
 mp3_folder = Dataiku.Folder('temp_mp3_folder')
 mp3_folder_path = mp3_folder.get_path()
 audio_path = mp3_folder_path + '/audio.mp3'
+wav_path = mp3_folder_path + '/audio.wav'
 
 def read_episode(url):
     
@@ -39,7 +40,7 @@ def read_episode(url):
                              "-r","16000",
                              "-ac","1", 
                              "-t","30",
-                             mp3_folder_path + "/audio_part_" + str(c) + ".wav"])
+                             wav_path])
         
         
         with sr.AudioFile("audio_part_" + str(c) + ".wav") as source:
