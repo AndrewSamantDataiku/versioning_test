@@ -12,7 +12,7 @@ import scipy.io.wavfile as wav
 episodes_sample = dataiku.Dataset("episodes_sample_filtered")
 episodes_sample_df = episodes_sample.get_dataframe()
 
-mp3_folder = Dataiku.Folder()
+mp3_folder = Dataiku.Folder('temp_mp3_folder')
 
 def read_episode(url):
     
