@@ -19,6 +19,8 @@ mp3_folder_path = mp3_folder.get_path()
 audio_path = mp3_folder_path + '/audio.mp3'
 wav_path = mp3_folder_path + '/audio.wav'
 
+failure_count = 0
+
 def read_episode(url):
     
     
