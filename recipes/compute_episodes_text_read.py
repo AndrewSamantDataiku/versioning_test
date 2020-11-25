@@ -38,7 +38,9 @@ def read_episode(url,length):
     import speech_recognition as sr
     r = sr.Recognizer()
     for c in range(1,chunk_count):
-        subprocess.call([ffmpeg_path,"-y",
+        try:
+            
+            subprocess.call([ffmpeg_path,"-y",
                              "-i",audio_path,
                              "-ss",max(str( (c-1)*30),1),
                              "-r","16000",
@@ -46,6 +48,8 @@ def read_episode(url,length):
                              "-t","30",
                              wav_path])
         
+        except:
+            pass
         
         with sr.AudioFile(wav_path) as source:
             audio = r.record(source)
