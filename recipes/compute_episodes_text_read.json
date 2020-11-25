@@ -5,7 +5,7 @@
   "params": {
     "envSelection": {
       "envMode": "EXPLICIT_ENV",
-      "envName": "speech_rec_py36"
+      "envName": "ffmpeg_27"
     },
     "containerSelection": {
       "containerMode": "INHERIT"
@@ -42,11 +42,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 33,
+    "versionNumber": 34,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1606338195468
+    "lastModifiedOn": 1606338205807
   },
   "creationTag": {
     "versionNumber": 0,
