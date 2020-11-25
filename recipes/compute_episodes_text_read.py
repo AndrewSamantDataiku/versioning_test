@@ -38,7 +38,8 @@ def read_episode(url,length):
     import speech_recognition as sr
     r = sr.Recognizer()
     for c in range(1,chunk_count):
-        subprocess.call([ffmpeg_path,"-y",'-analyzeduration','2147483647', '-probesize','2147483647',
+        subprocess.call([ffmpeg_path,"-y",
+                             '-c:a', 
                              "-ss",max(str( (c-1)*30),1),
                              "-i",audio_path,
                              "-r","16000",
