@@ -39,7 +39,7 @@ def read_episode(url,length):
     r = sr.Recognizer()
     for c in range(1,chunk_count):
         subprocess.call([ffmpeg_path,"-y",
-                             "-ss",str( (c-1)*30),
+                             "-ss",max(str( (c-1)*30),1),
                              "-i",audio_path,
                              "-r","16000",
                              "-ac","1", 
