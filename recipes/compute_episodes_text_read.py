@@ -49,7 +49,7 @@ def read_episode(url,length):
                              wav_path])
         
         except:
-            pass
+            return 'failed_to_read'
         
         with sr.AudioFile(wav_path) as source:
             audio = r.record(source)
