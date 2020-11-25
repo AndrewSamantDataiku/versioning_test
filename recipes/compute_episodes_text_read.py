@@ -26,8 +26,9 @@ def read_episode(url,length):
     
     
     file = requests.get(url)    
-    with mp3_folder.get_writer("audio.mp3") as w:
-            w.write(file.content)
+    #with mp3_folder.get_writer("audio.mp3") as w:
+    #        w.write(file.content)
+    open(audio_path,"wb").write(file.content)
     
     duration = length
     #duration = MP3(audio_path).info.length
