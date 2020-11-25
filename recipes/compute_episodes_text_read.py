@@ -41,7 +41,6 @@ def read_episode(url,length):
             
         subprocess.call([ffmpeg_path,"-y",
                              "-i",audio_path,
-                             "-acodec","copy",
                              "-ss",max(str( (c-1)*30),1),
                              "-r","16000",
                              "-ac","1", 
