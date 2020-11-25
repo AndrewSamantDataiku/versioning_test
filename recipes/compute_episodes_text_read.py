@@ -1,10 +1,4 @@
 import dataiku
-from dataiku import spark as dkuspark
-import dataiku.spark as dspark
-from pyspark import SparkContext
-from pyspark.sql import SQLContext
-from pyspark.sql.types import *
-from pyspark.sql.functions import udf
 import pandas as pd
 import numpy as np
 import requests
@@ -15,12 +9,8 @@ from pydub import AudioSegment
 import os
 import scipy.io.wavfile as wav
 
-sc = SparkContext.getOrCreate()
-sqlContext = SQLContext(sc)
-
-
 episodes_sample = dataiku.Dataset("episodes_sample_filtered")
-episodes_sample_df = dspark.get_dataframe(sqlContext, episodes_sample)
+episodes_sample_df = episodes_sample.get_dataframe()
 
 def read_episode(url):
     
@@ -59,9 +49,7 @@ def read_episode(url):
     
     return s
 
-read_udf = udf(lambda z: read_episode(z), ArrayType(StringType()) )
-
-rdf = episodes_sample_df
+episodes_sample_df['text'] = []
 rdf2 = rdf.withColumn( 'text',read_udf('audio_url'))
 
 
