@@ -54,7 +54,7 @@ def read_episode(url):
 episodes_sample_df['text'] = ''
 
 for index, row in episodes_sample_df.iterrows():
-    text = 
+    text = read_episode(row['url'])
 
 
 
