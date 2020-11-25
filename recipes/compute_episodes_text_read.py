@@ -21,14 +21,15 @@ wav_path = mp3_folder_path + '/audio.wav'
 
 failure_count = 0
 
-def read_episode(url):
+def read_episode(url,length):
     
     
     file = requests.get(url)    
     with mp3_folder.get_writer("audio.mp3") as w:
             w.write(file.content)
     
-    duration = MP3(audio_path).info.length
+    duration = length
+    #duration = MP3(audio_path).info.length
     chunk_count = int(math.ceil(duration/30))
     
     s= list()
@@ -74,7 +75,7 @@ def read_episode(url):
 
 episodes_sample_df['text'] = ''
 
-episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['link']), axis=1)
+episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['link'],row['length']), axis=1)
     
 
 
