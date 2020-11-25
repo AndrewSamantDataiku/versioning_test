@@ -80,7 +80,7 @@ def read_episode(url,length):
 
 episodes_sample_df['text'] = ''
 
-episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['link'],row['length']), axis=1)
+episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['audio_url'],row['length']), axis=1)
     
 
 
