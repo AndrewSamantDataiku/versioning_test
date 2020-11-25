@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1606336460205
+    "lastModifiedOn": 1606342426286
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,81 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "show_id",
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "link",
+        "type": "string"
+      },
+      {
+        "name": "guid",
+        "type": "string"
+      },
+      {
+        "name": "subtitle",
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "name": "summary",
+        "type": "string"
+      },
+      {
+        "name": "author",
+        "type": "string"
+      },
+      {
+        "name": "audio_url",
+        "type": "string"
+      },
+      {
+        "name": "audio_file_size",
+        "type": "bigint"
+      },
+      {
+        "name": "audio_mime_type",
+        "type": "string"
+      },
+      {
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "name": "explicit",
+        "type": "bigint"
+      },
+      {
+        "name": "length",
+        "type": "bigint"
+      },
+      {
+        "name": "pub_date",
+        "type": "string"
+      },
+      {
+        "name": "keywords",
+        "type": "string"
+      },
+      {
+        "name": "text",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
