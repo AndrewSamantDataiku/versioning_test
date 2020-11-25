@@ -14,7 +14,7 @@ import time
 episodes_sample = dataiku.Dataset("episodes_sample")
 episodes_sample_df = episodes_sample.get_dataframe().head(5000)
 
-mp3_folder = Dataiku.Folder('temp_mp3_folder')
+mp3_folder = dataiku.Folder('temp_mp3_folder')
 mp3_folder_path = mp3_folder.get_path()
 audio_path = mp3_folder_path + '/audio.mp3'
 wav_path = mp3_folder_path + '/audio.wav'
