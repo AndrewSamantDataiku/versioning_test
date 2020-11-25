@@ -38,9 +38,8 @@ def read_episode(url,length):
     import speech_recognition as sr
     r = sr.Recognizer()
     for c in range(1,chunk_count):
-        try:
             
-            subprocess.call([ffmpeg_path,"-y",
+        subprocess.call([ffmpeg_path,"-y",
                              "-i",audio_path,
                              "-ss",max(str( (c-1)*30),1),
                              "-r","16000",
@@ -48,33 +47,33 @@ def read_episode(url,length):
                              "-t","30",
                              wav_path])
         
-        except:
-            return 'failed_to_read'
-        
-        with sr.AudioFile(wav_path) as source:
-            audio = r.record(source)
-            try:
-                recognized = r.recognize_google(audio)
-            except:
+        try:
+            with sr.AudioFile(wav_path) as source:
+                audio = r.record(source)
                 try:
-                    time.wait(10)
-                    r = sr.Recognizer()
                     recognized = r.recognize_google(audio)
                 except:
                     try:
-                        time.wait(60)
+                        time.wait(10)
                         r = sr.Recognizer()
                         recognized = r.recognize_google(audio)
-                        failure_count = failure_count+1
                     except:
-                        if failure_count % 5 == 0:
-                            time.wait(300)
                         try:
+                            time.wait(60)
                             r = sr.Recognizer()
                             recognized = r.recognize_google(audio)
+                            failure_count = failure_count+1
                         except:
-                            recognized = ""
-        s.append( recognized )
+                            if failure_count % 5 == 0:
+                                time.wait(300)
+                            try:
+                                r = sr.Recognizer()
+                                recognized = r.recognize_google(audio)
+                            except:
+                                recognized = ""
+            s.append( recognized )
+        except:
+            return 'failed_to_read_mp3_file'
     
     return s
 
