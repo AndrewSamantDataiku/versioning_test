@@ -51,7 +51,8 @@ def read_episode(url):
                 recognized = r.recognize_google(audio)
             except:
                 try:
-                    
+                    time.wait(10)
+                    recognized = r.recognize_google(audio)
                 except:
                     recognized = ""
         s.append( recognized )
