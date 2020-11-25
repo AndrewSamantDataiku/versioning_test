@@ -74,7 +74,7 @@ def read_episode(url):
 
 episodes_sample_df['text'] = ''
 
-episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: EOQ(row['D'], row['p'], ck, ch), axis=1)
+episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['url']), axis=1)
     
 
 
