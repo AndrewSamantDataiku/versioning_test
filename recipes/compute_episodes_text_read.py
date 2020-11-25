@@ -12,13 +12,15 @@ import scipy.io.wavfile as wav
 episodes_sample = dataiku.Dataset("episodes_sample_filtered")
 episodes_sample_df = episodes_sample.get_dataframe()
 
+mp3_folder = Dataiku.Folder()
+
 def read_episode(url):
     
     import requests
     file = requests.get(url)
     
-    with open("audio.mp3", 'wb') as w:
-        w.write(file.content)
+    with mp3_folder.get_writer(audio_id + "audio.mp3") as w:
+            w.write(file.content)
     
     from mutagen.mp3 import MP3
     duration = MP3("audio.mp3").info.length
