@@ -4,12 +4,13 @@
   "type": "step_based",
   "name": "Extract_text",
   "active": false,
+  "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1606413731964
+    "lastModifiedOn": 1606413738192
   },
   "checklists": {
     "checklists": []
