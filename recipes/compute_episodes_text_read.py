@@ -71,7 +71,7 @@ def read_episode(url,length):
                                 r = sr.Recognizer()
                                 recognized = r.recognize_google(audio)
                             except:
-                                recognized = ""
+                                recognized = "google recognized failed"
             s.append( recognized )
         except:
             return 'failed_to_read_mp3_file'
