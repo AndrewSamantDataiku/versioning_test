@@ -24,8 +24,11 @@ ffmpeg_path = '/data/dataiku/data_dir/code-envs/python/ffmpeg_27/bin/ffmpeg/ffmp
 
 def read_episode(url,length):
     
-    
-    file = requests.get(url)    
+    try:
+        
+        file = requests.get(url)    
+    except:
+        return "failed to pull mp3 file"
     #with mp3_folder.get_writer("audio.mp3") as w:
     #        w.write(file.content)
     open(audio_path,"wb").write(file.content)
