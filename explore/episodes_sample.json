@@ -58,13 +58,13 @@
           "rules": []
         },
         "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 1150,
+        "maxRecords": 1100,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 19
+      "_refreshTrigger": 22
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -92,7 +92,7 @@
           "type": "alphanum",
           "column": "title",
           "values": [
-            "Joanne"
+            "Strength Coach Podcast"
           ],
           "params": {
             "mode": "substring",
