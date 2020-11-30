@@ -37,7 +37,7 @@
         "timeout": -1,
         "filter": {
           "distinct": false,
-          "enabled": true,
+          "enabled": false,
           "uiData": {
             "mode": "\u0026\u0026",
             "conditions": [
@@ -45,7 +45,7 @@
                 "input": "title",
                 "operator": "contains",
                 "col": "show_id",
-                "string": "Math",
+                "string": "Joanne",
                 "num": 0.0
               }
             ]
@@ -58,13 +58,13 @@
           "rules": []
         },
         "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 10000,
+        "maxRecords": 1150,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 2
+      "_refreshTrigger": 19
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -91,7 +91,9 @@
         "alphanumFilter": {
           "type": "alphanum",
           "column": "title",
-          "values": [],
+          "values": [
+            "Joanne"
+          ],
           "params": {
             "mode": "substring",
             "normalization": "exact"
