@@ -58,13 +58,13 @@
           "rules": []
         },
         "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 1100,
+        "maxRecords": 1500,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 22
+      "_refreshTrigger": 28
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -75,6 +75,39 @@
     },
     "globalSearchQuery": "",
     "explorationFilters": [
+      {
+        "column": "keywords",
+        "type": "columnFilter",
+        "currentMode": "FACET",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "keywords",
+          "columnType": "ALPHANUM",
+          "currentMode": "ALPHANUM",
+          "sort": "count",
+          "selectedValues": {}
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "keywords",
+          "values": [],
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "keywords",
+          "params": {
+            "type": "FreeText",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      },
       {
         "column": "title",
         "type": "columnFilter",
@@ -92,7 +125,7 @@
           "type": "alphanum",
           "column": "title",
           "values": [
-            "Strength Coach Podcast"
+            "Grilling"
           ],
           "params": {
             "mode": "substring",
@@ -105,8 +138,8 @@
           "params": {
             "type": "FreeText",
             "ok": true,
-            "nok": true,
-            "empty": true
+            "nok": false,
+            "empty": false
           }
         }
       }
