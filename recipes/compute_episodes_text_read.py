@@ -91,7 +91,7 @@ size = 100
 for i in range(0, len(episodes_sample_df),size):
     write_df = episodes_sample_df.loc[i:i+size-1,:]
     write_df['text'] = write_df.apply(lambda row: read_episode(row['audio_url'],row['length']), axis=1)
-    episodes_read.write_with_schema(write_df)
+    writer.write_dataframe(write_df)
 
     #episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['audio_url'],row['length']), axis=1)
     
