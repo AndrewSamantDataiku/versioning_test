@@ -69,7 +69,7 @@ def read_episode(url,length):
                             failure_count = failure_count+1
                         except:
                             if failure_count % 5 == 0:
-                                time.wait(300)
+                                time.sleep(300)
                             try:
                                 r = sr.Recognizer()
                                 recognized = r.recognize_google(audio)
