@@ -82,15 +82,21 @@ def read_episode(url,length):
     
     return s
 
+
+episodes_read = dataiku.Dataset("episodes_text_read")
+
+
 episodes_sample_df['text'] = ''
 size = 100
 for i in range(0, len(episodes_sample_df),size):
     write_df = episodes_sample_df.loc[i:i+size-1,:]
     write_df['text'] = write_df.apply(lambda row: read_episode(row['audio_url'],row['length']), axis=1)
-episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['audio_url'],row['length']), axis=1)
+    episodes_read.write_with_schema(write_df)
+
+    #episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['audio_url'],row['length']), axis=1)
     
 
 
 # Write recipe outputs
-episodes_read = dataiku.Dataset("episodes_text_read")
-episodes_read.write_with_schema(episodes_sample_df)
+#episodes_read = dataiku.Dataset("episodes_text_read")
+#episodes_read.write_with_schema(episodes_sample_df)
