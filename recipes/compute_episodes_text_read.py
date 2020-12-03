@@ -12,7 +12,7 @@ import math
 import time
 
 episodes_sample = dataiku.Dataset("episodes_sample")
-episodes_sample_df = episodes_sample.get_dataframe().head(3)
+episodes_sample_df = episodes_sample.get_dataframe().head(1000)
 
 mp3_folder = dataiku.Folder('temp_mp3_folder')
 mp3_folder_path = mp3_folder.get_path()
@@ -96,7 +96,7 @@ for i in range(0, len(episodes_sample_df),size):
 
     #episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['audio_url'],row['length']), axis=1)
     
-
+writer.close()
 
 # Write recipe outputs
 #episodes_read = dataiku.Dataset("episodes_text_read")
