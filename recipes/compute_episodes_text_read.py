@@ -12,7 +12,7 @@ import math
 import time
 
 episodes_sample = dataiku.Dataset("episodes_sample")
-episodes_sample_df = episodes_sample.get_dataframe().head(5000)
+episodes_sample_df = episodes_sample.get_dataframe().head(1000)
 
 mp3_folder = dataiku.Folder('temp_mp3_folder')
 mp3_folder_path = mp3_folder.get_path()
@@ -58,12 +58,12 @@ def read_episode(url,length):
                     recognized = r.recognize_google(audio)
                 except:
                     try:
-                        time.wait(10)
+                        time.sleep(10)
                         r = sr.Recognizer()
                         recognized = r.recognize_google(audio)
                     except:
                         try:
-                            time.wait(60)
+                            time.sleep(60)
                             r = sr.Recognizer()
                             recognized = r.recognize_google(audio)
                             failure_count = failure_count+1
