@@ -84,7 +84,7 @@ def read_episode(url,length):
 
 episodes_sample_df['text'] = ''
 size = 100
-list_of_dfs = [df.loc[i:i+size-1,:] for i in range(0, len(df),size)]
+list_of_dfs = [episodes_sample_df.loc[i:i+size-1,:] for i in range(0, len(episodes_sample_df),size)]
 episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['audio_url'],row['length']), axis=1)
     
 
