@@ -27,6 +27,7 @@ def read_episode(url,length):
     try:
         
         file = requests.get(url)    
+        print("pulling mp3 file: " + url)
     except:
         return "failed to pull mp3 file"
     #with mp3_folder.get_writer("audio.mp3") as w:
