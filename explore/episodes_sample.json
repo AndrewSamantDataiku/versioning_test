@@ -52,19 +52,22 @@
           }
         },
         "partitionSelectionMethod": "ALL",
+        "selectedPartitions": [
+          "NP"
+        ],
         "latestPartitionsN": 1,
         "ordering": {
           "enabled": false,
           "rules": []
         },
         "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 1500,
+        "maxRecords": 2000,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 28
+      "_refreshTrigger": 29
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -102,6 +105,72 @@
           "column": "keywords",
           "params": {
             "type": "FreeText",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      },
+      {
+        "column": "title",
+        "type": "columnFilter",
+        "currentMode": "FACET",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "title",
+          "columnType": "ALPHANUM",
+          "currentMode": "ALPHANUM",
+          "sort": "count",
+          "selectedValues": {}
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "title",
+          "values": [],
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "title",
+          "params": {
+            "type": "FreeText",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      },
+      {
+        "column": "audio_url",
+        "type": "columnFilter",
+        "currentMode": "SIMPLE_ALPHANUM",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "audio_url",
+          "columnType": "ALPHANUM",
+          "currentMode": "ALPHANUM",
+          "sort": "count",
+          "selectedValues": {}
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "audio_url",
+          "values": [],
+          "params": {
+            "mode": "substring",
+            "normalization": "exact"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "audio_url",
+          "params": {
+            "type": "URL",
             "ok": true,
             "nok": true,
             "empty": true
