@@ -61,13 +61,13 @@
           "rules": []
         },
         "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 2000,
+        "maxRecords": 200,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 29
+      "_refreshTrigger": 33
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -114,7 +114,7 @@
       {
         "column": "title",
         "type": "columnFilter",
-        "currentMode": "FACET",
+        "currentMode": "SIMPLE_ALPHANUM",
         "active": true,
         "facet": {
           "type": "facet",
@@ -127,7 +127,9 @@
         "alphanumFilter": {
           "type": "alphanum",
           "column": "title",
-          "values": [],
+          "values": [
+            "Mishandled Salvation"
+          ],
           "params": {
             "mode": "full_string",
             "normalization": "exact"
@@ -139,8 +141,8 @@
           "params": {
             "type": "FreeText",
             "ok": true,
-            "nok": true,
-            "empty": true
+            "nok": false,
+            "empty": false
           }
         }
       },
@@ -171,6 +173,39 @@
           "column": "audio_url",
           "params": {
             "type": "URL",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      },
+      {
+        "column": "summary",
+        "type": "columnFilter",
+        "currentMode": "FACET",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "summary",
+          "columnType": "ALPHANUM",
+          "currentMode": "ALPHANUM",
+          "sort": "count",
+          "selectedValues": {}
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "summary",
+          "values": [],
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "summary",
+          "params": {
+            "type": "FreeText",
             "ok": true,
             "nok": true,
             "empty": true
