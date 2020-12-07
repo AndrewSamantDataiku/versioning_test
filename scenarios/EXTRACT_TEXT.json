@@ -6,11 +6,11 @@
   "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607378550113
+    "lastModifiedOn": 1607378613453
   },
   "checklists": {
     "checklists": []
@@ -36,6 +36,23 @@
         "dayOfMonth": 2,
         "minute": 0,
         "hour": 8,
+        "count": 5
+      }
+    },
+    {
+      "id": "9ytV0mBU",
+      "type": "temporal",
+      "name": "Monthly_run 2",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "frequency": "Monthly",
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "dayOfMonth": 2,
+        "minute": 0,
+        "hour": 2,
         "count": 5
       }
     }
