@@ -32,7 +32,7 @@
       "items": [
         {
           "ref": "episodes_text_read",
-          "appendMode": false
+          "appendMode": true
         },
         {
           "ref": "8upaHHJ4",
@@ -42,11 +42,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 112,
+    "versionNumber": 113,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607363998903
+    "lastModifiedOn": 1607364040080
   },
   "creationTag": {
     "versionNumber": 0,
