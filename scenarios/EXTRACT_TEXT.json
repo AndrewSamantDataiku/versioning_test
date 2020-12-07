@@ -6,11 +6,11 @@
   "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 13,
+    "versionNumber": 14,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607378870820
+    "lastModifiedOn": 1607378945128
   },
   "checklists": {
     "checklists": []
@@ -55,6 +55,26 @@
         "minute": 0,
         "hour": 2,
         "count": 5
+      }
+    },
+    {
+      "id": "g2wvVLwf",
+      "type": "ds_modified",
+      "name": "d change",
+      "delay": 900,
+      "active": true,
+      "params": {
+        "watches": [
+          {
+            "type": "DATASET",
+            "itemId": "episodes_read",
+            "partitionsSpec": ""
+          }
+        ]
+      },
+      "graceDelaySettings": {
+        "delay": 120,
+        "checkAgainAfterGraceDelay": true
       }
     }
   ],
