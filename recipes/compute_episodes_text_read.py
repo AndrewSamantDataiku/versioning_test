@@ -84,7 +84,6 @@ def read_episode(url,length):
 
 
 episodes_read = dataiku.Dataset("episodes_text_read")
-writer = episodes_read.get_writer()
 
 episodes_sample_df['text'] = ''
 size = 100
