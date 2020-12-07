@@ -6,11 +6,11 @@
   "active": true,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 31,
+    "versionNumber": 32,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607379755233
+    "lastModifiedOn": 1607379760158
   },
   "checklists": {
     "checklists": []
@@ -51,7 +51,7 @@
           "Saturday"
         ],
         "dayOfMonth": 7,
-        "minute": 21,
+        "minute": 23,
         "hour": 17,
         "count": 5
       }
