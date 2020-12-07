@@ -96,7 +96,7 @@ for i in range(0, len(episodes_sample_df),size):
 
     #episodes_sample_df['text'] = episodes_sample_df.apply(lambda row: read_episode(row['audio_url'],row['length']), axis=1)
     
-writer.close()
+#writer.close()
 
 # Write recipe outputs
 #episodes_read = dataiku.Dataset("episodes_text_read")
