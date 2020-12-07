@@ -6,11 +6,11 @@
   "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607364780497
+    "lastModifiedOn": 1607378492621
   },
   "checklists": {
     "checklists": []
@@ -23,19 +23,20 @@
   "tags": [],
   "triggers": [
     {
-      "id": "r2lrnJRS",
-      "type": "custom_python",
-      "delay": 3600,
+      "id": "jwe9plGw",
+      "type": "temporal",
+      "name": "Monthly Run",
+      "delay": 5,
       "active": true,
       "params": {
-        "code": "from dataiku.scenario import Trigger\nt \u003d Trigger()\nif not True: # your condition here\n    t.fire()",
-        "envSelection": {
-          "envMode": "INHERIT"
-        }
-      },
-      "graceDelaySettings": {
-        "delay": 0,
-        "checkAgainAfterGraceDelay": false
+        "frequency": "Monthly",
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "dayOfMonth": 1,
+        "minute": 0,
+        "hour": 8,
+        "count": 5
       }
     }
   ],
