@@ -6,11 +6,11 @@
   "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1606413742665
+    "lastModifiedOn": 1607354593920
   },
   "checklists": {
     "checklists": []
@@ -21,7 +21,24 @@
     "suppressTriggersWhileRunning": true
   },
   "tags": [],
-  "triggers": [],
+  "triggers": [
+    {
+      "id": "r2lrnJRS",
+      "type": "custom_python",
+      "delay": 3600,
+      "active": true,
+      "params": {
+        "code": "from dataiku.scenario import Trigger\nt \u003d Trigger()\nif True: # your condition here\n    t.fire()",
+        "envSelection": {
+          "envMode": "INHERIT"
+        }
+      },
+      "graceDelaySettings": {
+        "delay": 0,
+        "checkAgainAfterGraceDelay": false
+      }
+    }
+  ],
   "reporters": [],
   "params": {
     "steps": [
