@@ -6,11 +6,11 @@
   "active": true,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 26,
+    "versionNumber": 27,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607379543815
+    "lastModifiedOn": 1607379596313
   },
   "checklists": {
     "checklists": []
@@ -27,7 +27,7 @@
       "type": "temporal",
       "name": "w run",
       "delay": 5,
-      "active": true,
+      "active": false,
       "params": {
         "frequency": "Weekly",
         "daysOfWeek": [
