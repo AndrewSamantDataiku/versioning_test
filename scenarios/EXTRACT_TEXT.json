@@ -6,11 +6,11 @@
   "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607378744209
+    "lastModifiedOn": 1607378765240
   },
   "checklists": {
     "checklists": []
@@ -21,7 +21,25 @@
     "suppressTriggersWhileRunning": true
   },
   "tags": [],
-  "triggers": [],
+  "triggers": [
+    {
+      "id": "Ug8eqkyI",
+      "type": "temporal",
+      "name": "m run",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "frequency": "Monthly",
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "dayOfMonth": 1,
+        "minute": 0,
+        "hour": 2,
+        "count": 5
+      }
+    }
+  ],
   "reporters": [],
   "params": {
     "steps": [
