@@ -6,11 +6,11 @@
   "active": true,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 29,
+    "versionNumber": 30,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607379650632
+    "lastModifiedOn": 1607379653005
   },
   "checklists": {
     "checklists": []
@@ -44,7 +44,7 @@
       "type": "temporal",
       "name": "m run",
       "delay": 5,
-      "active": false,
+      "active": true,
       "params": {
         "frequency": "Monthly",
         "daysOfWeek": [
