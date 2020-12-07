@@ -6,11 +6,11 @@
   "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 12,
+    "versionNumber": 13,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607378807234
+    "lastModifiedOn": 1607378870820
   },
   "checklists": {
     "checklists": []
@@ -34,6 +34,24 @@
           "Saturday"
         ],
         "dayOfMonth": 5,
+        "minute": 0,
+        "hour": 2,
+        "count": 5
+      }
+    },
+    {
+      "id": "MSOBsl5j",
+      "type": "temporal",
+      "name": "w run",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "frequency": "Weekly",
+        "daysOfWeek": [
+          "Saturday",
+          "Sunday"
+        ],
+        "dayOfMonth": 1,
         "minute": 0,
         "hour": 2,
         "count": 5
