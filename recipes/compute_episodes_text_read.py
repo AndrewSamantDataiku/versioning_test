@@ -12,7 +12,7 @@ import math
 import time
 
 episodes_sample = dataiku.Dataset("episodes_sample")
-episodes_sample_df = episodes_sample.get_dataframe().head(1000)
+episodes_sample_df = episodes_sample.get_dataframe().head(100)
 
 mp3_folder = dataiku.Folder('temp_mp3_folder')
 mp3_folder_path = mp3_folder.get_path()
