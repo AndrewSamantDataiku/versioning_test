@@ -6,11 +6,11 @@
   "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607354593920
+    "lastModifiedOn": 1607354608597
   },
   "checklists": {
     "checklists": []
@@ -28,7 +28,7 @@
       "delay": 3600,
       "active": true,
       "params": {
-        "code": "from dataiku.scenario import Trigger\nt \u003d Trigger()\nif True: # your condition here\n    t.fire()",
+        "code": "from dataiku.scenario import Trigger\nt \u003d Trigger()\nif not True: # your condition here\n    t.fire()",
         "envSelection": {
           "envMode": "INHERIT"
         }
