@@ -52,33 +52,35 @@ def read_episode(url,length):
                              "-t","30",
                              wav_path])
         
-        try:
-            with sr.AudioFile(wav_path) as source:
+        
+        with sr.AudioFile(wav_path) as source:
+            try:
                 audio = r.record(source)
+            except:
+                return 'failed_to_read_mp3_file'
+            try:
+                recognized = r.recognize_google(audio)
+            except:
                 try:
+                    time.sleep(10)
+                    r = sr.Recognizer()
                     recognized = r.recognize_google(audio)
                 except:
                     try:
-                        time.sleep(10)
+                        time.sleep(60)
                         r = sr.Recognizer()
                         recognized = r.recognize_google(audio)
+                        failure_count = failure_count+1
                     except:
+                        if failure_count % 5 == 0:
+                            time.sleep(300)
                         try:
-                            time.sleep(60)
                             r = sr.Recognizer()
                             recognized = r.recognize_google(audio)
-                            failure_count = failure_count+1
                         except:
-                            if failure_count % 5 == 0:
-                                time.sleep(300)
-                            try:
-                                r = sr.Recognizer()
-                                recognized = r.recognize_google(audio)
-                            except:
-                                recognized = "google recognized failed"
+                            recognized = "google recognized failed"
             s.append( recognized )
-        except:
-            return 'failed_to_read_mp3_file'
+        
     
     return s
 
