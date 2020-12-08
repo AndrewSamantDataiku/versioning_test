@@ -6,11 +6,11 @@
   "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 40,
+    "versionNumber": 41,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607443922922
+    "lastModifiedOn": 1607445224690
   },
   "checklists": {
     "checklists": []
@@ -21,7 +21,24 @@
     "suppressTriggersWhileRunning": true
   },
   "tags": [],
-  "triggers": [],
+  "triggers": [
+    {
+      "id": "CtGh47iS",
+      "type": "temporal",
+      "delay": 5,
+      "active": false,
+      "params": {
+        "frequency": "Monthly",
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "dayOfMonth": 8,
+        "minute": 34,
+        "hour": 11,
+        "count": 5
+      }
+    }
+  ],
   "reporters": [],
   "params": {
     "steps": [
