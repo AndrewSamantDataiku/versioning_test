@@ -6,11 +6,11 @@
   "active": true,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 37,
+    "versionNumber": 38,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607381019373
+    "lastModifiedOn": 1607443543070
   },
   "checklists": {
     "checklists": []
@@ -21,42 +21,7 @@
     "suppressTriggersWhileRunning": true
   },
   "tags": [],
-  "triggers": [
-    {
-      "id": "MSOBsl5j",
-      "type": "temporal",
-      "name": "w run",
-      "delay": 5,
-      "active": true,
-      "params": {
-        "frequency": "Weekly",
-        "daysOfWeek": [
-          "Sunday"
-        ],
-        "dayOfMonth": 1,
-        "minute": 0,
-        "hour": 2,
-        "count": 5
-      }
-    },
-    {
-      "id": "8WcTrPwu",
-      "type": "temporal",
-      "name": "m run",
-      "delay": 5,
-      "active": true,
-      "params": {
-        "frequency": "Monthly",
-        "daysOfWeek": [
-          "Saturday"
-        ],
-        "dayOfMonth": 7,
-        "minute": 4,
-        "hour": 17,
-        "count": 5
-      }
-    }
-  ],
+  "triggers": [],
   "reporters": [],
   "params": {
     "steps": [
