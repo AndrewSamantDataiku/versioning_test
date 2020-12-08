@@ -3,14 +3,14 @@
   "id": "EXTRACT_TEXT",
   "type": "step_based",
   "name": "Extract_text",
-  "active": true,
+  "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 39,
+    "versionNumber": 40,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607443543661
+    "lastModifiedOn": 1607443922922
   },
   "checklists": {
     "checklists": []
