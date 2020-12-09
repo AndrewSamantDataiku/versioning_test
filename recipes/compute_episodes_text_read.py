@@ -32,7 +32,10 @@ def read_episode(url,length):
         return "failed to pull mp3 file"
     #with mp3_folder.get_writer("audio.mp3") as w:
     #        w.write(file.content)
-    open(audio_path,"wb").write(file.content)
+    try:
+        open(audio_path,"wb").write(file.content)
+    except:
+        return "failed to write file content"
     
     duration = length
     #duration = MP3(audio_path).info.length
@@ -43,15 +46,17 @@ def read_episode(url,length):
     import speech_recognition as sr
     r = sr.Recognizer()
     for c in range(1,chunk_count):
-            
-        subprocess.call([ffmpeg_path,"-y",
+        
+        try:
+            subprocess.call([ffmpeg_path,"-y",
                              "-i",audio_path,
                              "-ss",str( max((c-1)*30,1)),
                              "-r","16000",
                              "-ac","1", 
                              "-t","30",
                              wav_path])
-        
+        except:
+            return "failed to usee ffmpeg"
         
         with sr.AudioFile(wav_path) as source:
             try:
