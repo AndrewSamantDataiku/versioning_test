@@ -15,7 +15,7 @@ episodes_sample = dataiku.Dataset("episodes_sample")
 START_ROW = 15
 END_ROW = 500
 episodes_sample_df = episodes_sample.get_dataframe()
-episodes_sample_df = episodes_sample_df.head(END_ROW).tail(-(START_ROW -1))#iloc[START_ROW-1:END_ROW-1,:]
+episodes_sample_df = episodes_sample_df.head(END_ROW)#.tail(-(START_ROW -1))#iloc[START_ROW-1:END_ROW-1,:]
 #episodes_sample_df = episodes_sample_df.drop(episodes_sample_df.index[[0,2]])
 
 mp3_folder = dataiku.Folder('temp_mp3_folder')
