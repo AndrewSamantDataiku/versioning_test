@@ -12,7 +12,9 @@ import math
 import time
 
 episodes_sample = dataiku.Dataset("episodes_sample")
-episodes_sample_df = episodes_sample.get_dataframe().head(500)
+START_ROW = 15
+END_ROW = 500
+episodes_sample_df = episodes_sample.get_dataframe().iloc[START_ROW-1:END_ROW-1]
 
 mp3_folder = dataiku.Folder('temp_mp3_folder')
 mp3_folder_path = mp3_folder.get_path()
@@ -32,10 +34,7 @@ def read_episode(url,length):
         return "failed to pull mp3 file"
     #with mp3_folder.get_writer("audio.mp3") as w:
     #        w.write(file.content)
-    try:
-        open(audio_path,"wb").write(file.content)
-    except:
-        return "failed to write file content"
+    open(audio_path,"wb").write(file.content)
     
     duration = length
     #duration = MP3(audio_path).info.length
@@ -46,17 +45,15 @@ def read_episode(url,length):
     import speech_recognition as sr
     r = sr.Recognizer()
     for c in range(1,chunk_count):
-        
-        try:
-            subprocess.call([ffmpeg_path,"-y",
+            
+        subprocess.call([ffmpeg_path,"-y",
                              "-i",audio_path,
                              "-ss",str( max((c-1)*30,1)),
                              "-r","16000",
                              "-ac","1", 
                              "-t","30",
                              wav_path])
-        except:
-            return "failed to usee ffmpeg"
+        
         
         with sr.AudioFile(wav_path) as source:
             try:
