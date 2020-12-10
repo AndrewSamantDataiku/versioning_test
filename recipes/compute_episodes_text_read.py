@@ -61,34 +61,36 @@ def read_episode(url,length):
         except:
             return "failed to decode mp3 with ffmpeg"
         
-        with sr.AudioFile(wav_path) as source:
-            try:
-                audio = r.record(source)
-            except:
-                return 'failed_to_read_mp3_file'
-            try:
-                recognized = r.recognize_google(audio)
-            except:
+        try:
+            with sr.AudioFile(wav_path) as source:
                 try:
-                    time.sleep(10)
-                    r = sr.Recognizer()
+                    audio = r.record(source)
+                except:
+                    return 'failed to record wav file'
+                try:
                     recognized = r.recognize_google(audio)
                 except:
                     try:
-                        time.sleep(60)
+                        time.sleep(10)
                         r = sr.Recognizer()
                         recognized = r.recognize_google(audio)
-                        failure_count = failure_count+1
                     except:
-                        if failure_count % 5 == 0:
-                            time.sleep(300)
                         try:
+                            time.sleep(60)
                             r = sr.Recognizer()
                             recognized = r.recognize_google(audio)
+                            failure_count = failure_count+1
                         except:
-                            recognized = "google recognize failed"
-            s.append( recognized )
-        
+                            if failure_count % 5 == 0:
+                                time.sleep(300)
+                            try:
+                                r = sr.Recognizer()
+                                recognized = r.recognize_google(audio)
+                            except:
+                                recognized = "google recognize failed"
+                s.append( recognized )
+        except: 
+            return "failed to read wav file"
     
     return s
 
