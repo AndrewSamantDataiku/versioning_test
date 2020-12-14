@@ -32,11 +32,11 @@
   "config": {},
   "name": "bokeh_app",
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607961975043
+    "lastModifiedOn": 1607961993315
   },
   "creationTag": {
     "versionNumber": 0,
