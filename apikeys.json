@@ -1,0 +1,34 @@
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [
+      {
+        "datasets": [],
+        "privileges": [
+          "READ_DATA",
+          "READ_METADATA",
+          "READ_SCHEMA"
+        ]
+      }
+    ],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "onBehalf": "h0HqEvE",
+    "id": "yO5FJToE0l45IS3Q",
+    "key": "Rx4cRnSmaGsy0ns0CK0v4EnPFNhacOdg",
+    "label": "Key for Web app classify(h0HqEvE)",
+    "createdOn": 1607959701050
+  }
+]
