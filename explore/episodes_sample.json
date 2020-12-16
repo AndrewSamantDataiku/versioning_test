@@ -61,13 +61,13 @@
           "rules": []
         },
         "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 200,
+        "maxRecords": 100,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 33
+      "_refreshTrigger": 38
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -128,10 +128,10 @@
           "type": "alphanum",
           "column": "title",
           "values": [
-            "Mishandled Salvation"
+            "Linux"
           ],
           "params": {
-            "mode": "full_string",
+            "mode": "substring",
             "normalization": "exact"
           }
         },
