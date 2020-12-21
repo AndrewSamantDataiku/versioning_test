@@ -61,13 +61,13 @@
           "rules": []
         },
         "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 100,
+        "maxRecords": 240,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 38
+      "_refreshTrigger": 44
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -128,7 +128,7 @@
           "type": "alphanum",
           "column": "title",
           "values": [
-            "Linux"
+            "PURPLE"
           ],
           "params": {
             "mode": "substring",
