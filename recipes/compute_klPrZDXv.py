@@ -31,4 +31,4 @@ for mp3 in mp3_folder.list_paths_in_partition()[0:2]:
                              "-ac","1",
                              "-segment_time","00:00:50",
                              "-f","segment",
-                             str(mp3_folder_path + mp3)[:-4] + "_part_%03d.wav"])
+                             str(wav_folder_path + mp3)[:-4] + "_part_%03d.wav"])
