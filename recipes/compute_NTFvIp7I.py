@@ -25,6 +25,9 @@ for row in episodes_sample.iter_rows():
     print(audio_id)
     
     if DOWNLOAD_FROM_URL == True:
+    try:
         with mp3_folder.get_writer(audio_id + ".mp3") as w:
-            w.write(file.content)
+             w.write(file.content)
+    except:
+        pass
     
