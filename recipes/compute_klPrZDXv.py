@@ -6,28 +6,18 @@ MAX_EPISODES = 1
 
 # Load Environment
 
-#import matplotlib
 import dataiku
 import pandas as pd
 import numpy as np
-import requests
 import ffmpeg
-import speech_recognition as sr
 import subprocess
 from pydub import AudioSegment
 import os
 import scipy.io.wavfile as wav
-import speech_recognition as sr
 
-
-r = sr.Recognizer()
-
-episodes_sample = dataiku.Dataset("episodes_sample")
-episodes_sample_df = episodes_sample.get_dataframe()
 
 mp3_folder = dataiku.Folder("mp3_files_local")
 wav_folder = dataiku.Folder("wav_files_local")
-episode_wavs_hdfs_folder = dataiku.Folder("episode_wavs_hdfs")
 
 already_read = 0
 
