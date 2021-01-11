@@ -4,8 +4,8 @@
   "optionalDependencies": false,
   "params": {
     "envSelection": {
-      "envMode": "USE_BUILTIN_MODE",
-      "envName": "podcast_reader_ffmpeg"
+      "envMode": "EXPLICIT_ENV",
+      "envName": "speech_rec_py36"
     },
     "containerSelection": {
       "containerMode": "INHERIT"
@@ -42,11 +42,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 42,
+    "versionNumber": 43,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1610382763484
+    "lastModifiedOn": 1610382784377
   },
   "creationTag": {
     "versionNumber": 0,
