@@ -18,11 +18,6 @@ wav_folder_path = wav_folder.get_path()
 
 already_read = 0
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-mp3_folder.list_paths_in_partition()[0:2]
-print()
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 for mp3 in mp3_folder.list_paths_in_partition()[0:2]:
     print(mp3_folder_path + mp3)
     print(wav_folder_path + mp3[:-4]+ "_part_%03d.wav")
@@ -32,4 +27,4 @@ for mp3 in mp3_folder.list_paths_in_partition()[0:2]:
                              "-ac","1",
                              "-segment_time","00:00:50",
                              "-f","segment",
-                             str(mp3_folder_path + mp3)[:-4] + "_part_1.wav"])
+                             str(mp3_folder_path + mp3)[:-4] + "_part_%03d.wav"])
