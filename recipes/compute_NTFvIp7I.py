@@ -8,7 +8,7 @@ import requests
 import os
 
 
-episodes_sample = dataiku.Dataset("episodes_sample")
+episodes_sample = dataiku.Dataset("episodes_sample_filtered")
 episodes_sample_df = episodes_sample.get_dataframe()
 mp3_folder = dataiku.Folder("mp3_files_local")
 

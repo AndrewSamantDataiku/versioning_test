@@ -20,7 +20,7 @@
     "main": {
       "items": [
         {
-          "ref": "episodes_sample",
+          "ref": "episodes_sample_filtered",
           "deps": []
         }
       ]
@@ -37,11 +37,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1610383389527
+    "lastModifiedOn": 1610383420896
   },
   "creationTag": {
     "versionNumber": 0,
