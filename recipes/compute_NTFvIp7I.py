@@ -21,10 +21,9 @@ for row in episodes_sample.iter_rows():
     audio_id = os.path.normpath(audio_id)
     url = row['audio_url']
     print("Accessing URL: " + url)
-    file = requests.get(url)
-    print(audio_id)
-    
     try:
+        file = requests.get(url)
+        print(audio_id)
         with mp3_folder.get_writer(audio_id + ".mp3") as w:
              w.write(file.content)
     except:
