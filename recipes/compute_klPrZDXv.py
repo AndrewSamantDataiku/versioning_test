@@ -1,4 +1,4 @@
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+
 # Load Environment
 
 import dataiku
