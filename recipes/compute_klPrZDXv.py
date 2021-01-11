@@ -1,8 +1,4 @@
 
-# Recipe Parameters
-
-MAX_EPISODES = 1
-
 
 # Load Environment
 
@@ -18,42 +14,20 @@ import scipy.io.wavfile as wav
 
 mp3_folder = dataiku.Folder("mp3_files_local")
 wav_folder = dataiku.Folder("wav_files_local")
+wav_folder_path = wav_folder.get_path()
 
 already_read = 0
 
 for row in episodes_sample.iter_rows():
     
-    already_read += 1 
-    audio_id = row['id']
     audio_id = os.path.normpath(audio_id)
-    url = row['audio_url']
-    print("Accessing URL: " + url)
-    file = requests.get(url)
-    print(audio_id)
     
-    if DOWNLOAD_FROM_URL == True:
-        with mp3_folder.get_writer(audio_id + ".mp3") as w:
-            w.write(file.content)
-    if CONVERT_TO_WAV == True:
-        subprocess.call(["/opt/ffmpeg/bin/ffmpeg","-y",
+
+    subprocess.call(["/opt/ffmpeg/bin/ffmpeg","-y",
                              "-i",mp3_folder.get_path() + "/" + audio_id + ".mp3",
                              "-r","16000",
                              "-ac","1",
                              "-segment_time","00:00:50",
                              "-f","segment",
-                             wav_folder.get_path() + "/" + audio_id+ "_part_%03d.wav"])
-    if SAVE_LOCAL_MP3_FILE == False:
-        mp3_folder.delete_path(mp3_folder.get_path() + "/" + audio_id + ".mp3")
-    
-    if UPLOAD_TO_HDFS == True:
-        for path in wav_folder.list_paths_in_partition():
-            path = path[1:]
-            full_path = os.path.join(wav_folder.get_path(), path)
-            episode_wavs_hdfs_folder.upload_file(path, full_path)
-            if SAVE_LOCAL_WAV_FILE == False:
-                wav_folder.delete_path(path)
-                
-
-    if already_read == MAX_EPISODES:
-        break
+                             wav_folder_path + "/" + audio_id+ "_part_%03d.wav"])
     
