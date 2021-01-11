@@ -4,7 +4,8 @@
   "optionalDependencies": false,
   "params": {
     "envSelection": {
-      "envMode": "INHERIT"
+      "envMode": "EXPLICIT_ENV",
+      "envName": "ffmpeg_27"
     },
     "containerSelection": {
       "containerMode": "INHERIT"
@@ -37,11 +38,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1610385803235
+    "lastModifiedOn": 1610385818901
   },
   "creationTag": {
     "versionNumber": 0,
