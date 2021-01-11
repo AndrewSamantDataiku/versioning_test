@@ -1,0 +1,63 @@
+{
+  "type": "CustomCode_speech-to-text-speech-to-text-cpu",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {},
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "audios": {
+      "items": [
+        {
+          "ref": "klPrZDXv",
+          "deps": []
+        }
+      ]
+    },
+    "weights": {
+      "items": [
+        {
+          "ref": "EeiNHSFY",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "text": {
+      "items": [
+        {
+          "ref": "episodes_sample_text",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1610386559202
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1610386559202
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
