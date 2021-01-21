@@ -8,7 +8,7 @@
       "envName": "ffmpeg_27"
     },
     "sparkConfig": {
-      "inheritConf": "k8s-config-standard",
+      "inheritConf": "ffmpeg-spark-k8s-config",
       "conf": []
     },
     "executionEngine": "SPARK_SUBMIT",
@@ -42,11 +42,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 67,
+    "versionNumber": 68,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1611261105878
+    "lastModifiedOn": 1611261514753
   },
   "creationTag": {
     "versionNumber": 0,
