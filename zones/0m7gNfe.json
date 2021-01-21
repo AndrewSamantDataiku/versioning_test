@@ -31,10 +31,6 @@
       "objectType": "DATASET"
     },
     {
-      "objectId": "jCLV1Jy8",
-      "objectType": "MANAGED_FOLDER"
-    },
-    {
       "objectId": "compute_jCLV1Jy8",
       "objectType": "RECIPE"
     }
