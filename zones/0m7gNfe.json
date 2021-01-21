@@ -29,6 +29,10 @@
     {
       "objectId": "episodes_sample",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "jCLV1Jy8",
+      "objectType": "MANAGED_FOLDER"
     }
   ],
   "shared": [],
