@@ -26,7 +26,7 @@ from pyspark.sql.types import *
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
 
-audios = dataiku.Folder("wav_files_local")
+audios = dataiku.Folder("wav_files_s3")
 #episode_wavs_hdfs_info = episode_wavs_hdfs.get_info()
 
 idx = 0
