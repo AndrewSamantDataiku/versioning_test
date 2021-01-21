@@ -33,6 +33,10 @@
     {
       "objectId": "jCLV1Jy8",
       "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "download_to_wav_files_hdfs",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
