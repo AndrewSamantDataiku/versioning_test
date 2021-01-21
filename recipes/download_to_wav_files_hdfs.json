@@ -3,7 +3,7 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "deleteExtraFiles": true,
+    "deleteExtraFiles": false,
     "copyEvenUpToDateFiles": false,
     "sources": []
   },
@@ -24,11 +24,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1611259436206
+    "lastModifiedOn": 1611259456815
   },
   "creationTag": {
     "versionNumber": 0,
