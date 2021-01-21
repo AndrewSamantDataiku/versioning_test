@@ -1,7 +1,36 @@
 {
   "name": "Wav File Extraction",
   "color": "#D03713",
-  "items": [],
+  "items": [
+    {
+      "objectId": "klPrZDXv",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "compute_klPrZDXv",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "NTFvIp7I",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "compute_NTFvIp7I",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "episodes_sample_filtered",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_episodes_sample_filtered",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "episodes_sample",
+      "objectType": "DATASET"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
