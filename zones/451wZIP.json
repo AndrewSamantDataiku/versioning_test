@@ -1,7 +1,20 @@
 {
   "name": "Deepspeech",
   "color": "#087ABF",
-  "items": [],
+  "items": [
+    {
+      "objectId": "ZVnmPUMt",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "episodes_sample_text",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_episodes_sample_text",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
