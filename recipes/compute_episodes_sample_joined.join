@@ -4,12 +4,15 @@
       "table2": 1,
       "table1": 0,
       "conditionsMode": "AND",
+      "rightLimit": {
+        "decisionColumn": {}
+      },
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
       "on": [
         {
           "column1": {
-            "name": "show_id",
+            "name": "id",
             "table": 0
           },
           "dateDiffUnit": "DAY",
@@ -19,7 +22,7 @@
           },
           "maxMatches": 1,
           "caseInsensitive": false,
-          "maxDistance": 0,
+          "maxDistance": 1,
           "normalizeText": false,
           "type": "EQ",
           "strict": false
@@ -28,11 +31,6 @@
     }
   ],
   "selectedColumns": [
-    {
-      "name": "show_id",
-      "type": "string",
-      "table": 0
-    },
     {
       "name": "text",
       "type": "string",
@@ -172,10 +170,6 @@
     "$status": {
       "schema": {
         "columns": [
-          {
-            "name": "show_id",
-            "type": "string"
-          },
           {
             "name": "text",
             "type": "string"
