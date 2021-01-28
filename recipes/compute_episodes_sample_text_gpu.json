@@ -7,8 +7,8 @@
       "language": "en",
       "expert": true,
       "BEAM_WIDTH": 100,
-      "LM_WEIGHT": 1.75,
-      "WORD_COUNT_WEIGHT": 1
+      "LM_WEIGHT": 0.7,
+      "WORD_COUNT_WEIGHT": 10
     },
     "containerSelection": {
       "containerMode": "INHERIT"
@@ -48,11 +48,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1611849179667
+    "lastModifiedOn": 1611850256704
   },
   "creationTag": {
     "versionNumber": 0,
