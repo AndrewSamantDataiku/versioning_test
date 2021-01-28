@@ -34,13 +34,8 @@
       "table": 0
     },
     {
-      "name": "text_concat",
+      "name": "text",
       "type": "string",
-      "table": 0
-    },
-    {
-      "name": "count",
-      "type": "bigint",
       "table": 0
     },
     {
@@ -160,13 +155,7 @@
   },
   "virtualInputs": [
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "autoSelectColumns": false,
-      "index": 0,
-      "computedColumns": []
+      "index": 1
     },
     {
       "preFilter": {
@@ -174,7 +163,7 @@
         "enabled": false
       },
       "autoSelectColumns": false,
-      "index": 1,
+      "index": 0,
       "computedColumns": []
     }
   ],
@@ -188,12 +177,8 @@
             "type": "string"
           },
           {
-            "name": "text_concat",
+            "name": "text",
             "type": "string"
-          },
-          {
-            "name": "count",
-            "type": "bigint"
           },
           {
             "name": "id",

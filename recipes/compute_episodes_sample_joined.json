@@ -11,11 +11,11 @@
     "main": {
       "items": [
         {
-          "ref": "episodes_sample_text_prepared_by_show_id",
+          "ref": "episodes_sample_filtered",
           "deps": []
         },
         {
-          "ref": "episodes_sample_filtered",
+          "ref": "episodes_sample_text_prepared",
           "deps": []
         }
       ]
@@ -32,11 +32,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1611846881041
+    "lastModifiedOn": 1611846953667
   },
   "creationTag": {
     "versionNumber": 0,
