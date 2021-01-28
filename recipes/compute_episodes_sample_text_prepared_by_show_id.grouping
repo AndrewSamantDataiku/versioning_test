@@ -3,7 +3,27 @@
     "distinct": false,
     "enabled": false
   },
-  "keys": [],
+  "keys": [
+    {
+      "last": false,
+      "max": false,
+      "column": "id",
+      "count": false,
+      "$idx": 1,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "concatDistinct": false,
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "$selected": false,
+      "stddev": false,
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
+    }
+  ],
   "values": [
     {
       "last": false,
@@ -29,7 +49,7 @@
     {
       "last": false,
       "max": false,
-      "column": "id",
+      "column": "title",
       "count": false,
       "$idx": 1,
       "sum": false,
@@ -48,7 +68,7 @@
     {
       "last": false,
       "max": false,
-      "column": "title",
+      "column": "link",
       "count": false,
       "$idx": 2,
       "sum": false,
@@ -67,7 +87,7 @@
     {
       "last": false,
       "max": false,
-      "column": "link",
+      "column": "guid",
       "count": false,
       "$idx": 3,
       "sum": false,
@@ -86,7 +106,7 @@
     {
       "last": false,
       "max": false,
-      "column": "guid",
+      "column": "subtitle",
       "count": false,
       "$idx": 4,
       "sum": false,
@@ -105,7 +125,7 @@
     {
       "last": false,
       "max": false,
-      "column": "subtitle",
+      "column": "description",
       "count": false,
       "$idx": 5,
       "sum": false,
@@ -124,7 +144,7 @@
     {
       "last": false,
       "max": false,
-      "column": "description",
+      "column": "summary",
       "count": false,
       "$idx": 6,
       "sum": false,
@@ -143,7 +163,7 @@
     {
       "last": false,
       "max": false,
-      "column": "summary",
+      "column": "author",
       "count": false,
       "$idx": 7,
       "sum": false,
@@ -162,7 +182,7 @@
     {
       "last": false,
       "max": false,
-      "column": "author",
+      "column": "audio_url",
       "count": false,
       "$idx": 8,
       "sum": false,
@@ -181,7 +201,7 @@
     {
       "last": false,
       "max": false,
-      "column": "audio_url",
+      "column": "audio_file_size",
       "count": false,
       "$idx": 9,
       "sum": false,
@@ -200,7 +220,7 @@
     {
       "last": false,
       "max": false,
-      "column": "audio_file_size",
+      "column": "audio_mime_type",
       "count": false,
       "$idx": 10,
       "sum": false,
@@ -219,7 +239,7 @@
     {
       "last": false,
       "max": false,
-      "column": "audio_mime_type",
+      "column": "category",
       "count": false,
       "$idx": 11,
       "sum": false,
@@ -238,7 +258,7 @@
     {
       "last": false,
       "max": false,
-      "column": "category",
+      "column": "explicit",
       "count": false,
       "$idx": 12,
       "sum": false,
@@ -257,7 +277,7 @@
     {
       "last": false,
       "max": false,
-      "column": "explicit",
+      "column": "length",
       "count": false,
       "$idx": 13,
       "sum": false,
@@ -276,7 +296,7 @@
     {
       "last": false,
       "max": false,
-      "column": "length",
+      "column": "pub_date",
       "count": false,
       "$idx": 14,
       "sum": false,
@@ -295,28 +315,9 @@
     {
       "last": false,
       "max": false,
-      "column": "pub_date",
-      "count": false,
-      "$idx": 15,
-      "sum": false,
-      "concat": false,
-      "type": "string",
-      "concatDistinct": false,
-      "countDistinct": false,
-      "min": false,
-      "avg": false,
-      "$selected": true,
-      "stddev": false,
-      "first": true,
-      "orderColumn": "text",
-      "concatSeparator": ","
-    },
-    {
-      "last": false,
-      "max": false,
       "column": "keywords",
       "count": false,
-      "$idx": 16,
+      "$idx": 15,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -374,11 +375,11 @@
       "schema": {
         "columns": [
           {
-            "name": "text_concat",
+            "name": "id",
             "type": "string"
           },
           {
-            "name": "id_first",
+            "name": "text_concat",
             "type": "string"
           },
           {
