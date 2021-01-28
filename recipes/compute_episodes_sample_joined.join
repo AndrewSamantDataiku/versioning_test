@@ -17,7 +17,7 @@
           },
           "dateDiffUnit": "DAY",
           "column2": {
-            "name": "show_id",
+            "name": "id",
             "table": 1
           },
           "maxMatches": 1,
