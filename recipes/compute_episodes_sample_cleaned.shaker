@@ -26,8 +26,28 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "TextSimplifierProcessor",
+      "params": {
+        "inCol": "text",
+        "outCol": "clean_text",
+        "sortAlphabetically": false,
+        "normalize": true,
+        "language": "english",
+        "clearStopWords": true,
+        "stem": true
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -35,7 +55,26 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "summary": 300,
+    "keywords": 300,
+    "author": 134,
+    "link": 300,
+    "length": 100,
+    "description": 300,
+    "title": 300,
+    "explicit": 100,
+    "pub_date": 176,
+    "subtitle": 300,
+    "guid": 300,
+    "audio_url": 300,
+    "audio_mime_type": 155,
+    "text": 300,
+    "id": 267,
+    "audio_file_size": 128,
+    "category": 100,
+    "clean_text": 300
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
