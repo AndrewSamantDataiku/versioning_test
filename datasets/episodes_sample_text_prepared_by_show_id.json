@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1611847221198
+    "lastModifiedOn": 1611847275491
   },
   "creationTag": {
     "versionNumber": 0,
@@ -91,67 +91,67 @@
         "type": "string"
       },
       {
-        "name": "text_concat",
+        "name": "text",
         "type": "string"
       },
       {
-        "name": "title_first",
+        "name": "title",
         "type": "string"
       },
       {
-        "name": "link_first",
+        "name": "link",
         "type": "string"
       },
       {
-        "name": "guid_first",
+        "name": "guid",
         "type": "string"
       },
       {
-        "name": "subtitle_first",
+        "name": "subtitle",
         "type": "string"
       },
       {
-        "name": "description_first",
+        "name": "description",
         "type": "string"
       },
       {
-        "name": "summary_first",
+        "name": "summary",
         "type": "string"
       },
       {
-        "name": "author_first",
+        "name": "author",
         "type": "string"
       },
       {
-        "name": "audio_url_first",
+        "name": "audio_url",
         "type": "string"
       },
       {
-        "name": "audio_file_size_first",
+        "name": "audio_file_size",
         "type": "string"
       },
       {
-        "name": "audio_mime_type_first",
+        "name": "audio_mime_type",
         "type": "string"
       },
       {
-        "name": "category_first",
+        "name": "category",
         "type": "string"
       },
       {
-        "name": "explicit_first",
+        "name": "explicit",
         "type": "string"
       },
       {
-        "name": "length_first",
+        "name": "length",
         "type": "string"
       },
       {
-        "name": "pub_date_first",
+        "name": "pub_date",
         "type": "string"
       },
       {
-        "name": "keywords_first",
+        "name": "keywords",
         "type": "string"
       },
       {
