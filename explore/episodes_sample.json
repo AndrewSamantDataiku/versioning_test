@@ -127,9 +127,7 @@
         "alphanumFilter": {
           "type": "alphanum",
           "column": "title",
-          "values": [
-            "PURPLE"
-          ],
+          "values": [],
           "params": {
             "mode": "substring",
             "normalization": "exact"
