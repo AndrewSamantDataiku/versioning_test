@@ -5,7 +5,18 @@
   },
   "keys": [
     {
-      "column": "show_id"
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "last": false,
+      "max": false,
+      "column": "show_id",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
@@ -15,15 +26,20 @@
       "firstLastNotNull": false,
       "column": "path",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "path",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -31,15 +47,20 @@
       "firstLastNotNull": false,
       "column": "text",
       "count": false,
+      "$idx": 1,
       "sum": false,
-      "concat": false,
+      "concat": true,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "path",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -47,8 +68,10 @@
       "firstLastNotNull": false,
       "column": "comment",
       "count": false,
+      "$idx": 2,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -94,8 +117,28 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "show_id",
+            "type": "string"
+          },
+          {
+            "name": "text_concat",
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
