@@ -368,7 +368,24 @@
     }
   },
   "enlargeYourBits": true,
-  "outputColumnNameOverrides": {},
+  "outputColumnNameOverrides": {
+    "text_concat": "text",
+    "author_first": "author",
+    "length_first": "length",
+    "explicit_first": "explicit",
+    "title_first": "title",
+    "subtitle_first": "subtitle",
+    "category_first": "category",
+    "pub_date_first": "pub_date",
+    "keywords_first": "keywords",
+    "guid_first": "guid",
+    "audio_mime_type_first": "audio_mime_type",
+    "summary_first": "summary",
+    "audio_url_first": "audio_url",
+    "description_first": "description",
+    "audio_file_size_first": "audio_file_size",
+    "link_first": "link"
+  },
   "computedColumns": [],
   "postFilter": {
     "$status": {
