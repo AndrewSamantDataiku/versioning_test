@@ -38,7 +38,7 @@
       "type": "CreateColumnWithGREL",
       "params": {
         "expression": "replace(split(path,\"_part\")[0],\"/\",\"\")",
-        "column": "episode_id"
+        "column": "show_id"
       },
       "alwaysShowComment": false
     }
