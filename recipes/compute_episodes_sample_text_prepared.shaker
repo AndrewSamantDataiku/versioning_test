@@ -55,7 +55,8 @@
     "episode_id": 274,
     "show_id": 267,
     "comment": 267,
-    "text": 300
+    "text": 300,
+    "id": 267
   },
   "sorting": [],
   "globalSearchQuery": "",
