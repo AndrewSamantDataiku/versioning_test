@@ -17,10 +17,6 @@
     {
       "objectId": "episodes_text_spark_by_path",
       "objectType": "DATASET"
-    },
-    {
-      "objectId": "6RQnCcHo",
-      "objectType": "MANAGED_FOLDER"
     }
   ],
   "shared": [],

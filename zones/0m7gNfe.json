@@ -33,6 +33,10 @@
     {
       "objectId": "compute_jCLV1Jy8",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "6RQnCcHo",
+      "objectType": "MANAGED_FOLDER"
     }
   ],
   "shared": [],
