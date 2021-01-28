@@ -21,6 +21,14 @@
     {
       "objectId": "compute_episodes_sample_text_prepared",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_episodes_sample_text_prepared_by_show_id",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "episodes_sample_text_prepared_by_show_id",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
