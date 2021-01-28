@@ -35,11 +35,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -50,11 +54,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -65,11 +73,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -80,11 +92,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -95,11 +111,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -110,11 +130,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -125,11 +149,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -140,11 +168,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -155,11 +187,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -170,11 +206,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -185,11 +225,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -200,11 +244,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -215,11 +263,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -230,11 +282,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -245,11 +301,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -260,11 +320,15 @@
       "sum": false,
       "concat": false,
       "type": "string",
+      "concatDistinct": false,
       "countDistinct": false,
       "min": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "text",
+      "concatSeparator": ","
     }
   ],
   "globalCount": true,
@@ -311,6 +375,70 @@
         "columns": [
           {
             "name": "text_concat",
+            "type": "string"
+          },
+          {
+            "name": "id_first",
+            "type": "string"
+          },
+          {
+            "name": "title_first",
+            "type": "string"
+          },
+          {
+            "name": "link_first",
+            "type": "string"
+          },
+          {
+            "name": "guid_first",
+            "type": "string"
+          },
+          {
+            "name": "subtitle_first",
+            "type": "string"
+          },
+          {
+            "name": "description_first",
+            "type": "string"
+          },
+          {
+            "name": "summary_first",
+            "type": "string"
+          },
+          {
+            "name": "author_first",
+            "type": "string"
+          },
+          {
+            "name": "audio_url_first",
+            "type": "string"
+          },
+          {
+            "name": "audio_file_size_first",
+            "type": "string"
+          },
+          {
+            "name": "audio_mime_type_first",
+            "type": "string"
+          },
+          {
+            "name": "category_first",
+            "type": "string"
+          },
+          {
+            "name": "explicit_first",
+            "type": "string"
+          },
+          {
+            "name": "length_first",
+            "type": "string"
+          },
+          {
+            "name": "pub_date_first",
+            "type": "string"
+          },
+          {
+            "name": "keywords_first",
             "type": "string"
           },
           {
