@@ -3,7 +3,13 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "language": "en",
+      "expert": true,
+      "BEAM_WIDTH": 100,
+      "LM_WEIGHT": 1.75,
+      "WORD_COUNT_WEIGHT": 1
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
@@ -42,11 +48,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1611849012060
+    "lastModifiedOn": 1611849179667
   },
   "creationTag": {
     "versionNumber": 0,
