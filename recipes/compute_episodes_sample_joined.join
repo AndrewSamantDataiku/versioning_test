@@ -6,84 +6,121 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "show_id",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "column2": {
+            "name": "show_id",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "show_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "text_concat",
+      "type": "string",
       "table": 0
     },
     {
       "name": "count",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "id",
+      "type": "string",
       "table": 1
     },
     {
       "name": "title",
+      "type": "string",
       "table": 1
     },
     {
       "name": "link",
+      "type": "string",
       "table": 1
     },
     {
       "name": "guid",
+      "type": "string",
       "table": 1
     },
     {
       "name": "subtitle",
+      "type": "string",
       "table": 1
     },
     {
       "name": "description",
+      "type": "string",
       "table": 1
     },
     {
       "name": "summary",
+      "type": "string",
       "table": 1
     },
     {
       "name": "author",
+      "type": "string",
       "table": 1
     },
     {
       "name": "audio_url",
+      "type": "string",
       "table": 1
     },
     {
       "name": "audio_file_size",
+      "type": "string",
       "table": 1
     },
     {
       "name": "audio_mime_type",
+      "type": "string",
       "table": 1
     },
     {
       "name": "category",
+      "type": "string",
       "table": 1
     },
     {
       "name": "explicit",
+      "type": "string",
       "table": 1
     },
     {
       "name": "length",
+      "type": "string",
       "table": 1
     },
     {
       "name": "pub_date",
+      "type": "string",
       "table": 1
     },
     {
       "name": "keywords",
+      "type": "string",
       "table": 1
     }
   ],
@@ -141,5 +178,91 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "show_id",
+            "type": "string"
+          },
+          {
+            "name": "text_concat",
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          },
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "link",
+            "type": "string"
+          },
+          {
+            "name": "guid",
+            "type": "string"
+          },
+          {
+            "name": "subtitle",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "summary",
+            "type": "string"
+          },
+          {
+            "name": "author",
+            "type": "string"
+          },
+          {
+            "name": "audio_url",
+            "type": "string"
+          },
+          {
+            "name": "audio_file_size",
+            "type": "string"
+          },
+          {
+            "name": "audio_mime_type",
+            "type": "string"
+          },
+          {
+            "name": "category",
+            "type": "string"
+          },
+          {
+            "name": "explicit",
+            "type": "string"
+          },
+          {
+            "name": "length",
+            "type": "string"
+          },
+          {
+            "name": "pub_date",
+            "type": "string"
+          },
+          {
+            "name": "keywords",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
