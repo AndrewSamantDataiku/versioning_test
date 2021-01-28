@@ -37,6 +37,14 @@
     {
       "objectId": "episodes_sample_joined",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "episodes_sample_cleaned",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_episodes_sample_cleaned",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
