@@ -6,7 +6,7 @@
       "mode": "ALL"
     },
     "columnWidthsByName": {
-      "path": 300,
+      "path": 432,
       "text": 632,
       "comment": 267
     },
@@ -15,7 +15,12 @@
       "individualColumns": [],
       "valueColoringMode": "HASH"
     },
-    "sorting": [],
+    "sorting": [
+      {
+        "column": "path",
+        "ascending": true
+      }
+    ],
     "analysisColumnData": {},
     "explorationSampling": {
       "selection": {
