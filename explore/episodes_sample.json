@@ -139,8 +139,8 @@
           "params": {
             "type": "FreeText",
             "ok": true,
-            "nok": false,
-            "empty": false
+            "nok": true,
+            "empty": true
           }
         }
       },
@@ -204,6 +204,83 @@
           "column": "summary",
           "params": {
             "type": "FreeText",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      },
+      {
+        "column": "category",
+        "type": "columnFilter",
+        "currentMode": "FACET",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "category",
+          "columnType": "ALPHANUM",
+          "currentMode": "ALPHANUM",
+          "sort": "count",
+          "selectedValues": {
+            "2015": true,
+            "": true,
+            "Uncategorized": true,
+            "Arts \u0026 Entertainment": true,
+            "Music": true,
+            "Podcast": true,
+            "Religion \u0026 Spirituality": true,
+            "podcasts": true,
+            "Sports": true,
+            "Bishop Tudor Bismark": true,
+            "Comedy": true,
+            "Convention Panels": true,
+            "Episode": true,
+            "Film": true,
+            "Garagehammer": true,
+            "GBB Podcast": true,
+            "Health in a Heartbeat": true,
+            "irish flute": true,
+            "Joe Henry": true,
+            "Judaism": true,
+            "Medicine": true,
+            "Other": true,
+            "photography": true,
+            "Photoshop User Magazine": true,
+            "Podcasting": true,
+            "Podcasts": true,
+            "Podcasts/Shows": true,
+            "Satire": true,
+            "Songs of Joy and Peace": true,
+            "Soundcloud": true,
+            "Success": true,
+            "Swimming": true,
+            "tabletop": true,
+            "Talk Radio": true,
+            "Tech House": true,
+            "Technology": true,
+            "THE KISS ROOM!": true,
+            "The Sales Leader": true,
+            "TV \u0026 Film": true,
+            "Voiceover": true,
+            "Voyager": true,
+            "XPVIDEOS Podcasts": true,
+            "YDKF": true
+          }
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "category",
+          "values": [],
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "category",
+          "params": {
+            "type": "Text",
             "ok": true,
             "nok": true,
             "empty": true

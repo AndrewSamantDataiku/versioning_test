@@ -18,8 +18,8 @@
         "sparkUseGlobalMetastore": false, 
         "sparkExecutionEngine": "SPARK_SUBMIT", 
         "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK", 
-        "pipelineAllowMerge": true, 
         "pipelineAllowStart": true, 
+        "pipelineAllowMerge": true, 
         "sparkConf": {
             "inheritConf": "default", 
             "conf": []
@@ -135,20 +135,20 @@
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "role": "TARGET", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
-                "dummy_drop": "NONE", 
+                "max_cat_safety": 200, 
                 "min_samples": 10, 
                 "type": "CATEGORY", 
-                "max_cat_safety": 200
+                "dummy_drop": "NONE"
             }, 
             "show_id": {
-                "missing_impute_with": "MODE", 
-                "dummy_drop": "AUTO", 
+                "min_samples": 10, 
+                "max_cat_safety": 200, 
                 "nb_bins_hashing": 1048576, 
                 "customHandlingCode": "", 
                 "category_handling": "DUMMIFY", 
@@ -156,143 +156,121 @@
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
-                "max_cat_safety": 200, 
-                "min_samples": 10, 
-                "type": "CATEGORY", 
-                "customProcessorWantsMatrix": false
-            }, 
-            "guid": {
-                "missing_impute_with": "MODE", 
                 "dummy_drop": "AUTO", 
-                "nb_bins_hashing": 1048576, 
-                "customHandlingCode": "", 
-                "category_handling": "DUMMIFY", 
-                "cumulative_proportion": 0.95, 
-                "sendToInput": "main", 
-                "state": {
-                    "userModified": false, 
-                    "recordedMeaning": "URL", 
-                    "autoModifiedByDSS": false
-                }, 
-                "missing_handling": "NONE", 
-                "max_nb_categories": 100, 
-                "dummy_clip": "MAX_NB_CATEGORIES", 
-                "role": "INPUT", 
-                "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "customProcessorWantsMatrix": false
             }, 
             "subtitle": {
                 "hashSVDHashSize": 200000, 
-                "useCustomVectorizer": false, 
+                "ngramMinSize": 1, 
+                "role": "REJECT", 
                 "customHandlingCode": "", 
                 "hashSVDSVDLimit": 50000, 
                 "customProcessorWantsMatrix": false, 
                 "hashSVDSVDComponents": 100, 
-                "minRowsRatio": 0.001, 
                 "sendToInput": "main", 
                 "maxWords": 0, 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "FreeText", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "FreeText"
                 }, 
-                "role": "REJECT", 
-                "text_handling": "TOKENIZE_HASHING_SVD", 
-                "ngramMinSize": 1, 
-                "stopWordsMode": "NONE", 
                 "ngramMaxSize": 1, 
+                "maxRowsRatio": 0.8, 
+                "useCustomVectorizer": false, 
+                "stopWordsMode": "NONE", 
+                "minRowsRatio": 0.001, 
                 "autoReason": "REJECT_DEFAULT_TEXT_HANDLING", 
                 "type": "TEXT", 
-                "maxRowsRatio": 0.8, 
+                "text_handling": "TOKENIZE_HASHING_SVD", 
                 "name": "subtitle"
             }, 
             "description": {
                 "hashSVDHashSize": 200000, 
-                "useCustomVectorizer": false, 
+                "ngramMinSize": 1, 
+                "role": "REJECT", 
                 "customHandlingCode": "", 
                 "hashSVDSVDLimit": 50000, 
                 "customProcessorWantsMatrix": false, 
                 "hashSVDSVDComponents": 100, 
-                "minRowsRatio": 0.001, 
                 "sendToInput": "main", 
                 "maxWords": 0, 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "FreeText", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "FreeText"
                 }, 
-                "role": "REJECT", 
-                "text_handling": "TOKENIZE_HASHING_SVD", 
-                "ngramMinSize": 1, 
-                "stopWordsMode": "NONE", 
                 "ngramMaxSize": 1, 
+                "maxRowsRatio": 0.8, 
+                "useCustomVectorizer": false, 
+                "stopWordsMode": "NONE", 
+                "minRowsRatio": 0.001, 
                 "autoReason": "REJECT_DEFAULT_TEXT_HANDLING", 
                 "type": "TEXT", 
-                "maxRowsRatio": 0.8, 
+                "text_handling": "TOKENIZE_HASHING_SVD", 
                 "name": "description"
             }, 
             "author": {
                 "hashSVDHashSize": 200000, 
-                "useCustomVectorizer": false, 
+                "ngramMinSize": 1, 
+                "role": "REJECT", 
                 "customHandlingCode": "", 
                 "hashSVDSVDLimit": 50000, 
                 "customProcessorWantsMatrix": false, 
                 "hashSVDSVDComponents": 100, 
-                "minRowsRatio": 0.001, 
                 "sendToInput": "main", 
                 "maxWords": 0, 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "FreeText", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "FreeText"
                 }, 
-                "role": "REJECT", 
-                "text_handling": "TOKENIZE_HASHING_SVD", 
-                "ngramMinSize": 1, 
-                "stopWordsMode": "NONE", 
                 "ngramMaxSize": 1, 
+                "maxRowsRatio": 0.8, 
+                "useCustomVectorizer": false, 
+                "stopWordsMode": "NONE", 
+                "minRowsRatio": 0.001, 
                 "autoReason": "REJECT_DEFAULT_TEXT_HANDLING", 
                 "type": "TEXT", 
-                "maxRowsRatio": 0.8, 
+                "text_handling": "TOKENIZE_HASHING_SVD", 
                 "name": "author"
             }, 
             "text": {
                 "hashSVDHashSize": 200000, 
-                "useCustomVectorizer": false, 
+                "ngramMinSize": 1, 
+                "role": "REJECT", 
                 "customHandlingCode": "", 
                 "hashSVDSVDLimit": 50000, 
                 "customProcessorWantsMatrix": false, 
                 "hashSVDSVDComponents": 100, 
-                "minRowsRatio": 0.001, 
                 "sendToInput": "main", 
                 "maxWords": 0, 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "FreeText", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "FreeText"
                 }, 
-                "role": "REJECT", 
-                "text_handling": "TOKENIZE_HASHING_SVD", 
-                "ngramMinSize": 1, 
-                "stopWordsMode": "NONE", 
                 "ngramMaxSize": 1, 
+                "maxRowsRatio": 0.8, 
+                "useCustomVectorizer": false, 
+                "stopWordsMode": "NONE", 
+                "minRowsRatio": 0.001, 
                 "autoReason": "REJECT_DEFAULT_TEXT_HANDLING", 
                 "type": "TEXT", 
-                "maxRowsRatio": 0.8, 
+                "text_handling": "TOKENIZE_HASHING_SVD", 
                 "name": "text"
             }, 
             "audio_mime_type": {
-                "missing_impute_with": "MODE", 
-                "dummy_drop": "AUTO", 
+                "min_samples": 10, 
+                "max_cat_safety": 200, 
                 "nb_bins_hashing": 1048576, 
                 "customHandlingCode": "", 
                 "category_handling": "DUMMIFY", 
@@ -300,88 +278,88 @@
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
-                "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "dummy_drop": "AUTO", 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "customProcessorWantsMatrix": false
             }, 
             "explicit": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "audio_file_size": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "summary": {
                 "hashSVDHashSize": 200000, 
-                "useCustomVectorizer": false, 
+                "ngramMinSize": 1, 
+                "role": "REJECT", 
                 "customHandlingCode": "", 
                 "hashSVDSVDLimit": 50000, 
                 "customProcessorWantsMatrix": false, 
                 "hashSVDSVDComponents": 100, 
-                "minRowsRatio": 0.001, 
                 "sendToInput": "main", 
                 "maxWords": 0, 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "FreeText", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "FreeText"
                 }, 
-                "role": "REJECT", 
-                "text_handling": "TOKENIZE_HASHING_SVD", 
-                "ngramMinSize": 1, 
-                "stopWordsMode": "NONE", 
                 "ngramMaxSize": 1, 
+                "maxRowsRatio": 0.8, 
+                "useCustomVectorizer": false, 
+                "stopWordsMode": "NONE", 
+                "minRowsRatio": 0.001, 
                 "autoReason": "REJECT_DEFAULT_TEXT_HANDLING", 
                 "type": "TEXT", 
-                "maxRowsRatio": 0.8, 
+                "text_handling": "TOKENIZE_HASHING_SVD", 
                 "name": "summary"
             }, 
             "audio_url": {
-                "missing_impute_with": "MODE", 
-                "dummy_drop": "AUTO", 
+                "min_samples": 10, 
+                "max_cat_safety": 200, 
                 "nb_bins_hashing": 1048576, 
                 "customHandlingCode": "", 
                 "category_handling": "DUMMIFY", 
@@ -389,42 +367,42 @@
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "URL", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "URL"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
-                "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "dummy_drop": "AUTO", 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "customProcessorWantsMatrix": false
             }, 
             "length": {
                 "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
+                "sendToInput": "main", 
                 "binarize_threshold_mode": "MEDIAN", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "LongMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "LongMeaning"
                 }, 
                 "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
                 "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
                 "type": "NUMERIC", 
                 "impute_constant_value": 0.0
             }, 
             "link": {
-                "missing_impute_with": "MODE", 
-                "dummy_drop": "AUTO", 
+                "min_samples": 10, 
+                "max_cat_safety": 200, 
                 "nb_bins_hashing": 1048576, 
                 "customHandlingCode": "", 
                 "category_handling": "DUMMIFY", 
@@ -432,137 +410,94 @@
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "URL", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "URL"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
-                "max_cat_safety": 200, 
-                "min_samples": 10, 
-                "type": "CATEGORY", 
-                "customProcessorWantsMatrix": false
-            }, 
-            "predicted_sentiment": {
-                "missing_impute_with": "MODE", 
                 "dummy_drop": "AUTO", 
-                "nb_bins_hashing": 1048576, 
-                "customHandlingCode": "", 
-                "category_handling": "DUMMIFY", 
-                "cumulative_proportion": 0.95, 
-                "sendToInput": "main", 
-                "state": {
-                    "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
-                }, 
-                "missing_handling": "NONE", 
-                "max_nb_categories": 100, 
-                "dummy_clip": "MAX_NB_CATEGORIES", 
-                "role": "INPUT", 
-                "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "customProcessorWantsMatrix": false
-            }, 
-            "path": {
-                "autoReason": "REJECT_IDENTIFIER", 
-                "customProcessorWantsMatrix": false, 
-                "dummy_drop": "NONE", 
-                "customHandlingCode": "", 
-                "missing_impute_with": "MODE", 
-                "category_handling": "DUMMIFY", 
-                "nb_bins_hashing": 1048576, 
-                "sendToInput": "main", 
-                "state": {
-                    "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
-                }, 
-                "missing_handling": "NONE", 
-                "max_nb_categories": 100, 
-                "dummy_clip": "MAX_NB_CATEGORIES", 
-                "role": "REJECT", 
-                "max_cat_safety": 200, 
-                "min_samples": 10, 
-                "type": "CATEGORY", 
-                "cumulative_proportion": 0.95
-            }, 
-            "keywords": {
-                "hashSVDHashSize": 200000, 
-                "useCustomVectorizer": false, 
-                "customHandlingCode": "", 
-                "hashSVDSVDLimit": 50000, 
-                "customProcessorWantsMatrix": false, 
-                "hashSVDSVDComponents": 100, 
-                "minRowsRatio": 0.001, 
-                "sendToInput": "main", 
-                "maxWords": 0, 
-                "state": {
-                    "userModified": false, 
-                    "recordedMeaning": "FreeText", 
-                    "autoModifiedByDSS": false
-                }, 
-                "role": "REJECT", 
-                "text_handling": "TOKENIZE_HASHING_SVD", 
-                "ngramMinSize": 1, 
-                "stopWordsMode": "NONE", 
-                "ngramMaxSize": 1, 
-                "autoReason": "REJECT_DEFAULT_TEXT_HANDLING", 
-                "type": "TEXT", 
-                "maxRowsRatio": 0.8, 
-                "name": "keywords"
             }, 
             "title": {
                 "hashSVDHashSize": 200000, 
-                "useCustomVectorizer": false, 
+                "ngramMinSize": 1, 
+                "role": "REJECT", 
                 "customHandlingCode": "", 
                 "hashSVDSVDLimit": 50000, 
                 "customProcessorWantsMatrix": false, 
                 "hashSVDSVDComponents": 100, 
-                "minRowsRatio": 0.001, 
                 "sendToInput": "main", 
                 "maxWords": 0, 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "FreeText", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "FreeText"
                 }, 
-                "role": "REJECT", 
-                "text_handling": "TOKENIZE_HASHING_SVD", 
-                "ngramMinSize": 1, 
-                "stopWordsMode": "NONE", 
                 "ngramMaxSize": 1, 
+                "maxRowsRatio": 0.8, 
+                "useCustomVectorizer": false, 
+                "stopWordsMode": "NONE", 
+                "minRowsRatio": 0.001, 
                 "autoReason": "REJECT_DEFAULT_TEXT_HANDLING", 
                 "type": "TEXT", 
-                "maxRowsRatio": 0.8, 
+                "text_handling": "TOKENIZE_HASHING_SVD", 
                 "name": "title"
             }, 
-            "prediction_confidence": {
-                "generate_derivative": false, 
-                "sendToInput": "main", 
-                "rescaling": "AVGSTD", 
-                "missing_handling": "IMPUTE", 
+            "path": {
+                "min_samples": 10, 
+                "cumulative_proportion": 0.95, 
+                "autoReason": "REJECT_IDENTIFIER", 
                 "customHandlingCode": "", 
                 "customProcessorWantsMatrix": false, 
-                "numerical_handling": "REGULAR", 
-                "binarize_threshold_mode": "MEDIAN", 
+                "nb_bins_hashing": 1048576, 
+                "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "DoubleMeaning", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
-                "role": "INPUT", 
-                "binarize_constant_threshold": 0.0, 
-                "quantile_bin_nb_bins": 4, 
-                "missing_impute_with": "MEAN", 
-                "type": "NUMERIC", 
-                "impute_constant_value": 0.0
-            }, 
-            "pub_date": {
+                "missing_handling": "NONE", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "role": "REJECT", 
+                "max_cat_safety": 200, 
                 "missing_impute_with": "MODE", 
-                "dummy_drop": "AUTO", 
+                "type": "CATEGORY", 
+                "dummy_drop": "NONE", 
+                "category_handling": "DUMMIFY"
+            }, 
+            "keywords": {
+                "hashSVDHashSize": 200000, 
+                "ngramMinSize": 1, 
+                "role": "REJECT", 
+                "customHandlingCode": "", 
+                "hashSVDSVDLimit": 50000, 
+                "customProcessorWantsMatrix": false, 
+                "hashSVDSVDComponents": 100, 
+                "sendToInput": "main", 
+                "maxWords": 0, 
+                "state": {
+                    "userModified": false, 
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "FreeText"
+                }, 
+                "ngramMaxSize": 1, 
+                "maxRowsRatio": 0.8, 
+                "useCustomVectorizer": false, 
+                "stopWordsMode": "NONE", 
+                "minRowsRatio": 0.001, 
+                "autoReason": "REJECT_DEFAULT_TEXT_HANDLING", 
+                "type": "TEXT", 
+                "text_handling": "TOKENIZE_HASHING_SVD", 
+                "name": "keywords"
+            }, 
+            "predicted_sentiment": {
+                "min_samples": 10, 
+                "max_cat_safety": 200, 
                 "nb_bins_hashing": 1048576, 
                 "customHandlingCode": "", 
                 "category_handling": "DUMMIFY", 
@@ -570,40 +505,105 @@
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "DateSource", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "INPUT", 
-                "max_cat_safety": 200, 
+                "dummy_drop": "AUTO", 
+                "missing_impute_with": "MODE", 
+                "type": "CATEGORY", 
+                "customProcessorWantsMatrix": false
+            }, 
+            "guid": {
                 "min_samples": 10, 
+                "max_cat_safety": 200, 
+                "nb_bins_hashing": 1048576, 
+                "customHandlingCode": "", 
+                "category_handling": "DUMMIFY", 
+                "cumulative_proportion": 0.95, 
+                "sendToInput": "main", 
+                "state": {
+                    "userModified": false, 
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "URL"
+                }, 
+                "missing_handling": "NONE", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "role": "INPUT", 
+                "dummy_drop": "AUTO", 
+                "missing_impute_with": "MODE", 
+                "type": "CATEGORY", 
+                "customProcessorWantsMatrix": false
+            }, 
+            "pub_date": {
+                "min_samples": 10, 
+                "max_cat_safety": 200, 
+                "nb_bins_hashing": 1048576, 
+                "customHandlingCode": "", 
+                "category_handling": "DUMMIFY", 
+                "cumulative_proportion": 0.95, 
+                "sendToInput": "main", 
+                "state": {
+                    "userModified": false, 
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "DateSource"
+                }, 
+                "missing_handling": "NONE", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "role": "INPUT", 
+                "dummy_drop": "AUTO", 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
                 "customProcessorWantsMatrix": false
             }, 
             "id": {
+                "min_samples": 10, 
+                "cumulative_proportion": 0.95, 
                 "autoReason": "REJECT_IDENTIFIER", 
-                "customProcessorWantsMatrix": false, 
-                "dummy_drop": "NONE", 
                 "customHandlingCode": "", 
-                "missing_impute_with": "MODE", 
-                "category_handling": "DUMMIFY", 
+                "customProcessorWantsMatrix": false, 
                 "nb_bins_hashing": 1048576, 
                 "sendToInput": "main", 
                 "state": {
                     "userModified": false, 
-                    "recordedMeaning": "Text", 
-                    "autoModifiedByDSS": false
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "Text"
                 }, 
                 "missing_handling": "NONE", 
                 "max_nb_categories": 100, 
                 "dummy_clip": "MAX_NB_CATEGORIES", 
                 "role": "REJECT", 
                 "max_cat_safety": 200, 
-                "min_samples": 10, 
+                "missing_impute_with": "MODE", 
                 "type": "CATEGORY", 
-                "cumulative_proportion": 0.95
+                "dummy_drop": "NONE", 
+                "category_handling": "DUMMIFY"
+            }, 
+            "prediction_confidence": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "autoModifiedByDSS": false, 
+                    "recordedMeaning": "DoubleMeaning"
+                }, 
+                "role": "INPUT", 
+                "quantile_bin_nb_bins": 4, 
+                "binarize_constant_threshold": 0.0, 
+                "missing_handling": "IMPUTE", 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
             }
         }, 
         "feature_generation": {
@@ -634,6 +634,7 @@
             "beta_1": 0.9, 
             "beta_2": 0.999, 
             "shuffle": true, 
+            "momentum": 0.8, 
             "nesterovs_momentum": true, 
             "solver": "adam", 
             "validation_fraction": 0.1, 
@@ -643,13 +644,12 @@
             "batch_size": 200, 
             "power_t": 0.5, 
             "seed": 1337, 
-            "activation": "relu", 
             "early_stopping": false, 
             "tol": 0.0001, 
             "epsilon": 1e-08, 
             "alpha": 0.001, 
-            "momentum": 0.8, 
             "auto_batch": true, 
+            "activation": "relu", 
             "learning_rate_init": 0.001, 
             "layer_sizes": {
                 "gridMode": "EXPLICIT", 
@@ -660,14 +660,14 @@
                     "nbValues": 3, 
                     "min": 8
                 }, 
+                "values": [
+                    10
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    10
-                ]
+                }
             }
         }, 
         "lasso_regression": {
@@ -680,16 +680,16 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
-                "nValues": 0, 
                 "values": [
                     0.1, 
                     1.0, 
                     10.0
-                ]
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }
             }, 
             "alphaMode": "AUTO_CV", 
             "enabled": false
@@ -704,16 +704,16 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
-                "nValues": 0, 
                 "values": [
                     0.1, 
                     1.0, 
                     3.0
-                ]
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }
             }, 
             "alphaMode": "MANUAL", 
             "enabled": false
@@ -749,18 +749,18 @@
                     "nbValues": 3, 
                     "min": 0.01
                 }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
-                "nValues": 0, 
                 "values": [
                     0.01, 
                     0.1, 
                     1.0, 
                     10.0, 
                     100.0
-                ]
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }
             }, 
             "n_jobs": 2, 
             "enabled": true
@@ -776,14 +776,14 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
+                "values": [
+                    1.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    1.0
-                ]
+                }
             }
         }, 
         "skipExpensiveReports": false, 
@@ -822,6 +822,24 @@
                     "min": 0.1
                 }
             }, 
+            "max_depth": {
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 8, 
+                    "nbValues": 3, 
+                    "min": 3
+                }, 
+                "values": [
+                    3
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }
+            }, 
             "learning_rate": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -831,14 +849,14 @@
                     "nbValues": 3, 
                     "min": 0.05
                 }, 
+                "values": [
+                    0.1
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.1
-                ]
+                }
             }, 
             "enabled": false, 
             "min_samples_leaf": {
@@ -850,14 +868,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
+                "values": [
+                    3
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    3
-                ]
+                }
             }, 
             "n_estimators": {
                 "gridMode": "EXPLICIT", 
@@ -868,16 +886,15 @@
                     "nbValues": 3, 
                     "min": 80
                 }, 
+                "values": [
+                    100
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    100
-                ]
+                }
             }, 
-            "selection_mode": "auto", 
             "max_features": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -887,33 +904,16 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "nValues": 0, 
                 "values": [
                     0
-                ]
-            }, 
-            "max_depth": {
-                "gridMode": "EXPLICIT", 
-                "randomMode": "RANGE", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 8, 
-                    "nbValues": 3, 
-                    "min": 3
-                }, 
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    3
-                ]
-            }
+                }
+            }, 
+            "selection_mode": "auto"
         }, 
         "plugin_python": {}, 
         "gbt_regression": {
@@ -947,6 +947,24 @@
                     "min": 0.1
                 }
             }, 
+            "max_depth": {
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 8, 
+                    "nbValues": 3, 
+                    "min": 3
+                }, 
+                "values": [
+                    3
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }
+            }, 
             "learning_rate": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -956,14 +974,14 @@
                     "nbValues": 3, 
                     "min": 0.05
                 }, 
+                "values": [
+                    0.1
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.1
-                ]
+                }
             }, 
             "enabled": false, 
             "min_samples_leaf": {
@@ -975,14 +993,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
+                "values": [
+                    3
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    3
-                ]
+                }
             }, 
             "n_estimators": {
                 "gridMode": "EXPLICIT", 
@@ -993,16 +1011,15 @@
                     "nbValues": 3, 
                     "min": 80
                 }, 
+                "values": [
+                    100
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    100
-                ]
+                }
             }, 
-            "selection_mode": "auto", 
             "max_features": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -1012,33 +1029,16 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "nValues": 0, 
                 "values": [
                     0
-                ]
-            }, 
-            "max_depth": {
-                "gridMode": "EXPLICIT", 
-                "randomMode": "RANGE", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 8, 
-                    "nbValues": 3, 
-                    "min": 3
-                }, 
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    3
-                ]
-            }
+                }
+            }, 
+            "selection_mode": "auto"
         }, 
         "nb_sparkling": {
             "enabled": false, 
@@ -1054,11 +1054,11 @@
             ], 
             "batchSize": 32, 
             "stepsPerEpoch": 100, 
+            "gpuAllowGrowth": false, 
+            "epochs": 10, 
             "kerasInputs": [
                 "main"
             ], 
-            "epochs": 10, 
-            "gpuAllowGrowth": false, 
             "advancedFitMode": false, 
             "shuffleData": true, 
             "enabled": false
@@ -1093,14 +1093,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
+                "values": [
+                    5
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    5
-                ]
+                }
             }, 
             "enabled": false, 
             "min_samples_leaf": {
@@ -1112,14 +1112,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
+                "values": [
+                    1
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    1
-                ]
+                }
             }
         }, 
         "grid_search": true, 
@@ -1134,14 +1134,14 @@
                     "nbValues": 3, 
                     "min": 5
                 }, 
+                "values": [
+                    8
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    8
-                ]
+                }
             }, 
             "selection_mode": "auto", 
             "enabled": false, 
@@ -1154,14 +1154,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
+                "values": [
+                    3
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    3
-                ]
+                }
             }, 
             "n_estimators": {
                 "gridMode": "EXPLICIT", 
@@ -1172,14 +1172,14 @@
                     "nbValues": 3, 
                     "min": 80
                 }, 
+                "values": [
+                    100
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    100
-                ]
+                }
             }, 
             "max_feature_prop": {
                 "gridMode": "EXPLICIT", 
@@ -1207,14 +1207,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
+                "values": [
+                    5
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    5
-                ]
+                }
             }
         }, 
         "deep_learning_sparkling": {
@@ -1227,71 +1227,31 @@
             "max_w2": -1.0, 
             "use_adaptative": true, 
             "activation": "RECTIFIER", 
+            "l1": 0.0, 
             "enabled": false, 
-            "epsilon": 1e-08, 
             "epochs": 10.0, 
             "momentum_ramp": 1000000.0, 
             "rate": 0.005, 
             "input_dropout_ratio": 0.0, 
             "l2": 0.0, 
             "rho": 0.99, 
-            "l1": 0.0, 
+            "epsilon": 1e-08, 
             "hidden": [
                 10, 
                 10
             ], 
-            "momentum_stable": 0.0, 
+            "rate_decay": 1.0, 
             "dropout": false, 
-            "rate_decay": 1.0
+            "momentum_stable": 0.0
         }, 
         "mllib_gbt": {
             "cache_node_ids": false, 
             "subset_strategy": "auto", 
             "subsampling_rate": 1.0, 
+            "max_memory_mb": 256, 
             "impurity": "gini", 
             "max_bins": 32, 
             "enabled": false, 
-            "step_size": {
-                "gridMode": "EXPLICIT", 
-                "randomMode": "RANGE", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 0.5, 
-                    "nbValues": 3, 
-                    "min": 0.05
-                }, 
-                "limit": {
-                    "max": 1, 
-                    "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.1
-                ]
-            }, 
-            "checkpoint_interval": 10, 
-            "min_instance_per_node": 1, 
-            "min_info_gain": 0.0, 
-            "max_memory_mb": 256, 
-            "num_trees": {
-                "gridMode": "EXPLICIT", 
-                "randomMode": "RANGE", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 50, 
-                    "nbValues": 3, 
-                    "min": 10
-                }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    20
-                ]
-            }, 
-            "seed": 1337, 
             "max_depth": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -1301,25 +1261,70 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
+                "values": [
+                    5
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
+                }
+            }, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "step_size": {
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 0.5, 
+                    "nbValues": 3, 
+                    "min": 0.05
                 }, 
-                "nValues": 0, 
                 "values": [
-                    5
-                ]
-            }
+                    0.1
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": 1, 
+                    "min": 1e-23
+                }
+            }, 
+            "num_trees": {
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 50, 
+                    "nbValues": 3, 
+                    "min": 10
+                }, 
+                "values": [
+                    20
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }
+            }, 
+            "seed": 1337, 
+            "checkpoint_interval": 10
         }, 
-        "max_ensemble_nodes_serialized": 6000, 
+        "vertica_logistic_regression": {
+            "epsilon": 1e-06, 
+            "maxIterations": 200, 
+            "enabled": false, 
+            "optimizer": "BFGS"
+        }, 
         "gbm_sparkling": {
             "learn_rate": 0.1, 
             "ntrees": 50, 
             "family": "AUTO", 
             "nbins": 20, 
-            "enabled": false, 
-            "tweedie_power": 1.5, 
             "min_rows": 10, 
+            "tweedie_power": 1.5, 
+            "enabled": false, 
             "nbins_cats": 1024, 
             "balance_classes": false, 
             "max_after_balance_size": 2.0, 
@@ -1350,14 +1355,14 @@
                     "nbValues": 3, 
                     "min": 5
                 }, 
+                "values": [
+                    8
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    8
-                ]
+                }
             }, 
             "selection_mode": "auto", 
             "enabled": false, 
@@ -1370,14 +1375,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
+                "values": [
+                    3
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    3
-                ]
+                }
             }, 
             "n_estimators": {
                 "gridMode": "EXPLICIT", 
@@ -1388,14 +1393,14 @@
                     "nbValues": 3, 
                     "min": 10
                 }, 
+                "values": [
+                    30
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    30
-                ]
+                }
             }, 
             "max_feature_prop": {
                 "gridMode": "EXPLICIT", 
@@ -1423,14 +1428,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
+                "values": [
+                    5
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    5
-                ]
+                }
             }
         }, 
         "metrics": {
@@ -1439,21 +1444,21 @@
             "liftPoint": 0.4, 
             "customEvaluationMetricGIB": true, 
             "costMatrixWeights": {
-                "fnGain": 0.0, 
                 "tpGain": 1.0, 
+                "fnGain": 0.0, 
                 "tnGain": 0.0, 
                 "fpGain": -0.3
             }
         }, 
         "gridSearchParams": {
             "nIter": 0, 
-            "nJobs": 4, 
+            "splitRatio": 0.8, 
             "strategy": "GRID", 
             "randomized": true, 
             "shuffleIterations": 1, 
             "mode": "KFOLD", 
             "timeout": 0, 
-            "splitRatio": 0.8, 
+            "nJobs": 4, 
             "nFolds": 3, 
             "stratified": true
         }, 
@@ -1483,14 +1488,14 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
+                "values": [
+                    1.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    1.0
-                ]
+                }
             }, 
             "max_iter": -1, 
             "enabled": false, 
@@ -1531,10 +1536,6 @@
             "cache_node_ids": false, 
             "max_bins": 32, 
             "enabled": false, 
-            "checkpoint_interval": 10, 
-            "min_instance_per_node": 1, 
-            "min_info_gain": 0.0, 
-            "max_memory_mb": 256, 
             "max_depth": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -1544,15 +1545,19 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
+                "values": [
+                    5
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    5
-                ]
-            }
+                }
+            }, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "max_memory_mb": 256, 
+            "checkpoint_interval": 10
         }, 
         "leastsquare_regression": {
             "n_jobs": 2, 
@@ -1570,14 +1575,14 @@
                     "nbValues": 3, 
                     "min": 0.001
                 }, 
+                "values": [
+                    0.1
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.1
-                ]
+                }
             }, 
             "enet_param": {
                 "gridMode": "EXPLICIT", 
@@ -1588,14 +1593,14 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
+                "values": [
+                    0.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.0
-                ]
+                }
             }
         }, 
         "knn": {
@@ -1610,14 +1615,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
+                "values": [
+                    5
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    5
-                ]
+                }
             }, 
             "enabled": false, 
             "p": 2, 
@@ -1635,14 +1640,14 @@
                     "nbValues": 3, 
                     "min": 0.001
                 }, 
+                "values": [
+                    0.1
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.1
-                ]
+                }
             }, 
             "enet_param": {
                 "gridMode": "EXPLICIT", 
@@ -1653,14 +1658,14 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
+                "values": [
+                    0.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.0
-                ]
+                }
             }
         }, 
         "svc_classifier": {
@@ -1689,14 +1694,14 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
+                "values": [
+                    1.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    1.0
-                ]
+                }
             }, 
             "max_iter": -1, 
             "enabled": false, 
@@ -1738,7 +1743,24 @@
             "seed": 1337, 
             "early_stopping_rounds": 4, 
             "enable_cuda": false, 
-            "missing": 0.0, 
+            "colsample_bylevel": {
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 1.0, 
+                    "nbValues": 3, 
+                    "min": 0.5
+                }, 
+                "values": [
+                    1.0
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": 1.0, 
+                    "min": 1e-23
+                }
+            }, 
             "nthread": 4, 
             "min_child_weight": {
                 "gridMode": "EXPLICIT", 
@@ -1749,14 +1771,14 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
+                "values": [
+                    0.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.0
-                ]
+                }
             }, 
             "objective": {
                 "values": {
@@ -1769,33 +1791,33 @@
                     "reg_gamma": {
                         "enabled": false
                     }, 
-                    "multi_softprob": {
+                    "binary_logistic": {
                         "enabled": false
                     }, 
-                    "binary_logistic": {
+                    "multi_softprob": {
                         "enabled": false
                     }
                 }
             }, 
-            "impute_missing": false, 
-            "colsample_bylevel": {
+            "max_depth": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
                 "range": {
                     "scaling": "LINEAR", 
-                    "max": 1.0, 
+                    "max": 5, 
                     "nbValues": 3, 
-                    "min": 0.5
+                    "min": 2
                 }, 
-                "limit": {
-                    "max": 1.0, 
-                    "min": 1e-23
-                }, 
-                "nValues": 0, 
                 "values": [
-                    1.0
-                ]
+                    3
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }
             }, 
+            "missing": 0.0, 
             "scale_pos_weight": 1.0, 
             "learning_rate": {
                 "gridMode": "EXPLICIT", 
@@ -1806,14 +1828,14 @@
                     "nbValues": 3, 
                     "min": 0.1
                 }, 
+                "values": [
+                    0.2
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.2
-                ]
+                }
             }, 
             "max_delta_step": {
                 "gridMode": "EXPLICIT", 
@@ -1824,14 +1846,14 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
+                "values": [
+                    0.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 0.0
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.0
-                ]
+                }
             }, 
             "base_score": 0.5, 
             "n_estimators": 300, 
@@ -1844,14 +1866,14 @@
                     "nbValues": 3, 
                     "min": 0.0
                 }, 
+                "values": [
+                    0.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 0.0
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.0
-                ]
+                }
             }, 
             "booster": {
                 "values": {
@@ -1863,7 +1885,6 @@
                     }
                 }
             }, 
-            "enable_early_stopping": true, 
             "colsample_bytree": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -1873,34 +1894,17 @@
                     "nbValues": 3, 
                     "min": 0.5
                 }, 
+                "values": [
+                    1.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    1.0
-                ]
+                }
             }, 
             "enabled": false, 
-            "max_depth": {
-                "gridMode": "EXPLICIT", 
-                "randomMode": "RANGE", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 5, 
-                    "nbValues": 3, 
-                    "min": 2
-                }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    3
-                ]
-            }, 
+            "impute_missing": false, 
             "subsample": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -1910,34 +1914,16 @@
                     "nbValues": 3, 
                     "min": 0.5
                 }, 
+                "values": [
+                    1.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    1.0
-                ]
+                }
             }, 
             "gpu_tree_method": "gpu_exact", 
-            "gamma": {
-                "gridMode": "EXPLICIT", 
-                "randomMode": "RANGE", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 1.0, 
-                    "nbValues": 3, 
-                    "min": 0.0
-                }, 
-                "limit": {
-                    "max": null, 
-                    "min": 0.0
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.0
-                ]
-            }, 
             "lambda": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -1947,15 +1933,34 @@
                     "nbValues": 3, 
                     "min": 0.5
                 }, 
+                "values": [
+                    1.0
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": 1.0, 
                     "min": 1e-23
+                }
+            }, 
+            "gamma": {
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 1.0, 
+                    "nbValues": 3, 
+                    "min": 0.0
                 }, 
-                "nValues": 0, 
                 "values": [
-                    1.0
-                ]
-            }
+                    0.0
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 0.0
+                }
+            }, 
+            "enable_early_stopping": true
         }, 
         "sgd_regression": {
             "loss": {
@@ -1995,14 +2000,14 @@
                     "nbValues": 3, 
                     "min": 0.01
                 }, 
+                "values": [
+                    0.01
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.01
-                ]
+                }
             }, 
             "alpha": {
                 "gridMode": "EXPLICIT", 
@@ -2013,25 +2018,20 @@
                     "nbValues": 3, 
                     "min": 1e-05
                 }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
-                "nValues": 0, 
                 "values": [
                     0.001, 
                     0.0001, 
                     1e-05
-                ]
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }
             }
         }, 
         "custom_mllib": [], 
-        "vertica_logistic_regression": {
-            "epsilon": 1e-06, 
-            "maxIterations": 200, 
-            "enabled": false, 
-            "optimizer": "BFGS"
-        }, 
+        "max_ensemble_nodes_serialized": 6000, 
         "decision_tree_regression": {
             "splitter": {
                 "values": {
@@ -2062,14 +2062,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
+                "values": [
+                    5
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    5
-                ]
+                }
             }, 
             "enabled": false, 
             "min_samples_leaf": {
@@ -2081,14 +2081,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
+                "values": [
+                    1
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    1
-                ]
+                }
             }
         }, 
         "sgd_classifier": {
@@ -2129,66 +2129,26 @@
                     "nbValues": 3, 
                     "min": 1e-05
                 }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1e-23
-                }, 
-                "nValues": 0, 
                 "values": [
                     0.001, 
                     0.0001, 
                     1e-05
-                ]
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1e-23
+                }
             }
         }, 
         "mllib_rf": {
             "cache_node_ids": false, 
             "subset_strategy": "auto", 
             "subsampling_rate": 1.0, 
+            "max_memory_mb": 256, 
             "impurity": "gini", 
             "max_bins": 32, 
             "enabled": false, 
-            "step_size": {
-                "gridMode": "EXPLICIT", 
-                "randomMode": "RANGE", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 0.5, 
-                    "nbValues": 3, 
-                    "min": 0.05
-                }, 
-                "limit": {
-                    "max": 1, 
-                    "min": 1e-23
-                }, 
-                "nValues": 0, 
-                "values": [
-                    0.1
-                ]
-            }, 
-            "checkpoint_interval": 10, 
-            "min_instance_per_node": 1, 
-            "min_info_gain": 0.0, 
-            "max_memory_mb": 256, 
-            "num_trees": {
-                "gridMode": "EXPLICIT", 
-                "randomMode": "RANGE", 
-                "range": {
-                    "scaling": "LINEAR", 
-                    "max": 50, 
-                    "nbValues": 3, 
-                    "min": 10
-                }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    20
-                ]
-            }, 
-            "seed": 1337, 
             "max_depth": {
                 "gridMode": "EXPLICIT", 
                 "randomMode": "RANGE", 
@@ -2198,15 +2158,55 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
+                "values": [
+                    5
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
+                }
+            }, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "step_size": {
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 0.5, 
+                    "nbValues": 3, 
+                    "min": 0.05
                 }, 
-                "nValues": 0, 
                 "values": [
-                    5
-                ]
-            }
+                    0.1
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": 1, 
+                    "min": 1e-23
+                }
+            }, 
+            "num_trees": {
+                "gridMode": "EXPLICIT", 
+                "randomMode": "RANGE", 
+                "range": {
+                    "scaling": "LINEAR", 
+                    "max": 50, 
+                    "nbValues": 3, 
+                    "min": 10
+                }, 
+                "values": [
+                    20
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }
+            }, 
+            "seed": 1337, 
+            "checkpoint_interval": 10
         }, 
         "random_forest_classification": {
             "n_jobs": 4, 
@@ -2219,15 +2219,15 @@
                     "nbValues": 3, 
                     "min": 5
                 }, 
-                "limit": {
-                    "max": null, 
-                    "min": 1
-                }, 
-                "nValues": 0, 
                 "values": [
                     6, 
                     14
-                ]
+                ], 
+                "nValues": 0, 
+                "limit": {
+                    "max": null, 
+                    "min": 1
+                }
             }, 
             "selection_mode": "auto", 
             "enabled": true, 
@@ -2240,14 +2240,14 @@
                     "nbValues": 3, 
                     "min": 3
                 }, 
+                "values": [
+                    1
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    1
-                ]
+                }
             }, 
             "n_estimators": {
                 "gridMode": "EXPLICIT", 
@@ -2258,14 +2258,14 @@
                     "nbValues": 3, 
                     "min": 80
                 }, 
+                "values": [
+                    100
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    100
-                ]
+                }
             }, 
             "max_feature_prop": {
                 "gridMode": "EXPLICIT", 
@@ -2293,14 +2293,14 @@
                     "nbValues": 3, 
                     "min": 1
                 }, 
+                "values": [
+                    5
+                ], 
+                "nValues": 0, 
                 "limit": {
                     "max": null, 
                     "min": 1
-                }, 
-                "nValues": 0, 
-                "values": [
-                    5
-                ]
+                }
             }
         }
     }, 
@@ -2347,6 +2347,7 @@
         "ascending": true
     }, 
     "partitionedModel": {
+        "enabled": false, 
         "ssdSelection": {
             "targetRatio": 0.02, 
             "maxReadUncompressedBytes": -1, 
@@ -2364,7 +2365,6 @@
             "partitionSelectionMethod": "ALL", 
             "useMemTable": false, 
             "samplingMethod": "FULL"
-        }, 
-        "enabled": false
+        }
     }
 }
