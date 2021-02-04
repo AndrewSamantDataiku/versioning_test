@@ -6,11 +6,11 @@
   "active": false,
   "runAsUser": "admin",
   "versionTag": {
-    "versionNumber": 44,
+    "versionNumber": 45,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612462377286
+    "lastModifiedOn": 1612463372351
   },
   "checklists": {
     "checklists": []
@@ -56,13 +56,7 @@
         "delayBetweenRetries": 10,
         "maxRetriesOnFail": 0,
         "params": {
-          "builds": [
-            {
-              "type": "DATASET",
-              "itemId": "episodes_text_read",
-              "partitionsSpec": ""
-            }
-          ],
+          "builds": [],
           "jobType": "RECURSIVE_BUILD",
           "refreshHiveMetastore": true,
           "proceedOnFailure": false
