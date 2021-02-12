@@ -6,8 +6,8 @@
     "customConfig": {
       "language": "en",
       "expert": true,
-      "BEAM_WIDTH": 100,
-      "LM_WEIGHT": 0.7,
+      "BEAM_WIDTH": 3,
+      "LM_WEIGHT": 0.5,
       "WORD_COUNT_WEIGHT": 10
     },
     "containerSelection": {
@@ -48,11 +48,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1611850256704
+    "lastModifiedOn": 1613171667956
   },
   "creationTag": {
     "versionNumber": 0,
