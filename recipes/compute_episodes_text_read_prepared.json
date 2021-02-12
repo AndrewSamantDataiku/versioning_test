@@ -8,7 +8,11 @@
         "readParams": {
           "mode": "AUTO",
           "autoModeRepartitionInto": 10,
-          "map": {}
+          "map": {
+            "episodes_text_read": {
+              "repartition": 10
+            }
+          }
         },
         "useGlobalMetastore": true,
         "useNativeProcessors": true,
@@ -65,11 +69,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1607021440277
+    "lastModifiedOn": 1613169659801
   },
   "creationTag": {
     "versionNumber": 0,

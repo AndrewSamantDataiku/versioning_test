@@ -26,7 +26,10 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
   "steps": [],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
@@ -35,7 +38,26 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "summary": 300,
+    "keywords": 300,
+    "show_id": 267,
+    "author": 211,
+    "link": 300,
+    "length": 100,
+    "description": 300,
+    "title": 300,
+    "explicit": 100,
+    "pub_date": 176,
+    "subtitle": 300,
+    "guid": 300,
+    "audio_url": 300,
+    "audio_mime_type": 155,
+    "id": 267,
+    "audio_file_size": 128,
+    "text": 300,
+    "category": 113
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
