@@ -15,7 +15,7 @@ wav_files = wav_files_local.list_paths_in_partition()
 folder_path = wav_files_local.get_path()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-wav_paths = [os.path.join([folder_path,f[1:]]) for f in wav_files]
+wav_paths = [os.path.join([folder_path,f[1:]])[0] for f in wav_files]
 wav_files = [f[1:-4] for f in wav_files]
 
 
