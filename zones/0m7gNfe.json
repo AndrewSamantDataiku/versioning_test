@@ -45,6 +45,10 @@
     {
       "objectId": "wav_files_ds",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_wav_files_ds",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
