@@ -37,6 +37,10 @@
     {
       "objectId": "6RQnCcHo",
       "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "wav_files_dataset",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
